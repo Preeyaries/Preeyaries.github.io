@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preeyanan Khamfoei Resume</title>
+<meta name="description" content="Resume of Preeyanan Khamfoei, Master of IT (Computer Science) student at QUT and full-stack developer in Brisbane.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700;800&family=Lato:ital,wght@0,400;0,700;1,400&display=swap">
+<style id="resume-css">
+:root{
+  --ground:#e7e9ec;
+  --paper:#ffffff;
+  --ink:#2a3342;
+  --navy:#2b3445;
+  --muted:#5e6878;
+  --rule:#2b3445;
+  --hair:#cfd4db;
+  --bar:#ffffff;
+  --bar-ink:#2a3342;
+  --bar-line:#d3d8de;
+  --warn:#9a5b00;
+  --ok:#2d6a3e;
+  --edit-ring:#8fb0cf;
+  --edit-fill:#f2f7fb;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#14181e;--bar:#1b2129;--bar-ink:#e5e9ee;--bar-line:#2d3540;--warn:#e0a54a;--ok:#7cc48f;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#14181e;--bar:#1b2129;--bar-ink:#e5e9ee;--bar-line:#2d3540;--warn:#e0a54a;--ok:#7cc48f;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--ground);color:var(--ink);font-family:Lato,"Segoe UI",Arial,sans-serif;font-size:14px;line-height:1.5}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bar);color:var(--bar-ink);border-bottom:1px solid var(--bar-line);padding:10px 16px}
+.bar-in{max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.bar-title{font-weight:700;margin-right:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.status{font-size:12.5px;font-weight:400;color:var(--muted)}
+.status.warn{color:var(--warn)}.status.ok{color:var(--ok)}
+button{font:inherit;font-size:13px;font-weight:700;cursor:pointer;border-radius:6px;padding:7px 14px;border:1px solid var(--bar-line);background:transparent;color:var(--bar-ink)}
+button:hover{border-color:var(--navy)}
+button:focus-visible,[contenteditable]:focus-visible{outline:2px solid #4a78a8;outline-offset:2px}
+button.primary{background:var(--navy);border-color:var(--navy);color:#fff}
+button[disabled]{opacity:.5;cursor:default}
+.note{max-width:900px;margin:8px auto 0;font-size:12.5px;color:var(--muted)}
+.wrap{padding:20px 16px 48px}
+.sheet{max-width:900px;margin:0 auto;background:var(--paper);color:var(--ink);padding:44px 44px 48px;border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.06),0 10px 30px rgba(20,30,50,.12)}
+@media (max-width:700px){.sheet{padding:28px 20px}}
+
+.top{padding-bottom:16px;border-bottom:2px solid var(--rule)}
+.name{font-family:"League Spartan",Lato,Arial,sans-serif;font-weight:800;text-transform:uppercase;font-size:40px;line-height:1;letter-spacing:.02em;color:var(--navy);margin:0;text-wrap:balance}
+.role{margin:8px 0 0;font-size:16px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+
+.cols{display:grid;grid-template-columns:230px 1fr;gap:0 30px;margin-top:26px}
+@media (max-width:700px){.cols{grid-template-columns:1fr;gap:10px}}
+.side h2,.main h2{font-family:"League Spartan",Lato,Arial,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:17px;color:var(--navy);margin:0}
+.side section{margin-bottom:26px}
+.side h2{padding-bottom:6px;border-bottom:1.5px solid var(--rule);margin-bottom:12px}
+.clist{display:grid;gap:9px;margin:0;padding:0;list-style:none;font-size:13px}
+.clist li{display:grid;grid-template-columns:18px 1fr;gap:10px;align-items:start;word-break:break-word}
+.clist svg{width:15px;height:15px;margin-top:2px;fill:var(--navy)}
+.clist a{color:inherit}
+.sk{display:grid;gap:10px}
+.sk-label{font-weight:700;font-size:13px;color:var(--navy)}
+.sk-items{margin:1px 0 0;font-size:12.8px;color:var(--ink)}
+.c-dates{color:var(--muted);font-size:12px}
+.bul{margin:0;padding-left:16px;font-size:13px;display:grid;gap:5px}
+
+.main{position:relative;padding-left:44px}
+.main::before{content:"";position:absolute;left:12px;top:14px;bottom:6px;width:1.5px;background:var(--navy)}
+@media (max-width:700px){.main{padding-left:38px}}
+.main section{position:relative;margin-bottom:26px}
+.main .icon{position:absolute;left:-44px;top:-2px;width:26px;height:26px;border-radius:50%;background:var(--navy);display:grid;place-items:center}
+@media (max-width:700px){.main .icon{left:-38px}}
+.main .icon svg{width:14px;height:14px;fill:#fff}
+.main h2{padding-bottom:6px;border-bottom:1.5px solid var(--rule);margin-bottom:12px}
+.profile{margin:0;font-size:13.3px;text-align:justify;hyphens:auto}
+.entries{display:grid;gap:14px}
+.entry{position:relative}
+.entry::before{content:"";position:absolute;left:-36px;top:6px;width:7px;height:7px;border-radius:50%;border:1.5px solid var(--navy);background:var(--paper)}
+@media (max-width:700px){.entry::before{left:-30px}}
+.row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 14px;align-items:baseline}
+.e-title{font-weight:700;font-size:14px;color:var(--navy)}
+.e-when{font-size:12.5px;color:var(--ink);white-space:nowrap}
+.e-sub{font-size:13.5px;color:var(--ink)}
+.tech{font-size:12px;font-style:italic;color:var(--muted);margin-top:1px}
+.pts{margin:6px 0 0;padding-left:18px;font-size:13px;display:grid;gap:3px;text-align:justify}
+.desc{margin:6px 0 0;font-size:13px}
+.del{position:absolute;top:-4px;right:-6px;padding:2px 7px;font-size:12px;line-height:1.2;color:var(--muted);background:var(--paper);transform:translateX(100%)}
+@media (max-width:980px){.del{transform:none;right:0;top:-22px}}
+.add{margin-top:10px;font-size:12.5px;padding:5px 10px;color:var(--navy);border-style:dashed;border-color:var(--edit-ring);background:transparent}
+.editing [data-k]{border-radius:3px;background:var(--edit-fill);box-shadow:0 0 0 1px var(--edit-ring);cursor:text;min-width:1ch;display:inline-block}
+.editing p[data-k],.editing div[data-k]{display:block}
+[data-k]:empty::before{content:attr(data-ph);color:#9aa4ae}
+.hide-empty:empty{display:none}
+.editing .hide-empty:empty{display:inline-block}
+</style>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script type="application/json" id="resume-data">
+{
+  "name": "Preeyanan Khamfoei",
+  "role": "Full-Stack Developer | Master of IT Student",
+  "location": "Brisbane, QLD, Australia",
+  "email": "ploy.skp25@gmail.com",
+  "phone": "0481 224 118",
+  "linkedin": "linkedin.com/in/preeyanan-khamfoei-4514aa176",
+  "github": "github.com/Preeyaries",
+  "summary": "Master of Information Technology (Computer Science) student at QUT with a Diploma of Information Technology in back-end and front-end web development. I build full-stack web applications with React, Node.js, Express.js, Python and Flask, backed by MySQL and MongoDB, and I design user-focused interfaces through human-centred design in Figma. Hands-on experience deploying applications to AWS with Git, GitHub Actions, Nginx, PM2 and CI/CD workflows. Currently leading UX/UI design for an AI-powered farm assistant in an industry project with Orefox AI, and growing my skills in machine learning, NLP and data science. Seeking internship and graduate opportunities in software development, full-stack development or UX/UI design.",
+  "skills": [
+    {
+      "label": "Languages",
+      "items": "Python, JavaScript, C#, PHP, SQL, HTML/CSS"
+    },
+    {
+      "label": "Frameworks",
+      "items": "React, Node.js, Express.js, Flask, .NET, WordPress, WooCommerce"
+    },
+    {
+      "label": "Machine learning",
+      "items": "PyTorch, Hugging Face Transformers, scikit-learn, NLP, Data Modelling"
+    },
+    {
+      "label": "Databases",
+      "items": "MySQL, MongoDB"
+    },
+    {
+      "label": "Cloud and DevOps",
+      "items": "AWS (EC2), Git, GitHub Actions, CI/CD, Nginx, PM2"
+    },
+    {
+      "label": "Design and data",
+      "items": "Figma, User Research, Prototyping, Usability Testing, Tableau"
+    },
+    {
+      "label": "Practices",
+      "items": "REST APIs, MVC, OOP, Data Validation, Agile, Jira, Unit Testing"
+    }
+  ],
+  "languages": [
+    {
+      "text": "Thai (Native)"
+    },
+    {
+      "text": "English (Professional)"
+    }
+  ],
+  "community": [
+    {
+      "role": "Member",
+      "org": "QUT AI & ML Society",
+      "dates": ""
+    }
+  ],
+  "education": [
+    {
+      "school": "Queensland University of Technology (QUT)",
+      "degree": "Master of Information Technology, Computer Science",
+      "dates": "2025 – 2027",
+      "note": "Key units: Machine Learning, Software Life Cycle, Human-Centred Design, Object-Oriented Design, Cyber Security and Governance, IT Industry Project."
+    },
+    {
+      "school": "TAFE Queensland",
+      "degree": "Diploma of Information Technology (Back End and Front End Web Development)",
+      "dates": "2024 – 2025",
+      "note": ""
+    },
+    {
+      "school": "TAFE Queensland",
+      "degree": "Certificate III in Information Technology",
+      "dates": "2024",
+      "note": ""
+    },
+    {
+      "school": "Rattana Bundit University, Thailand",
+      "degree": "Bachelor's degree, Business, Management and Marketing",
+      "dates": "2019",
+      "note": ""
+    }
+  ],
+  "industry": [
+    {
+      "name": "Orefox AI Farm Assistant with Orefox AI Limited",
+      "context": "Jul 2026 – Present",
+      "sub": "UX/UI and Data Analytics Lead, team of 6",
+      "tech": "Figma, RAG-based AI, Scrum, GitHub, Notion",
+      "desc": "Designed the Figma prototype for an AI-powered farm assistant and led it through client design approval before development began. Designed the chat and document interfaces, including source-citation UX so farmers can see where each AI answer comes from. Built the accuracy evaluation question set used to check the RAG pipeline's answers, and designed data and dashboard views. Ran usability reviews and worked in two-week Scrum sprints with fortnightly client meetings with the Orefox product manager."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Bello! Language Exchange Platform",
+      "context": "2026",
+      "sub": "UI Designer and Developer, QUT",
+      "tech": "React, Node.js, Express.js, MongoDB, AWS, GitHub Actions, Nginx, PM2, Jira",
+      "desc": "Designed the user interface in Figma and collaborated on development of a full-stack language exchange platform. Coordinated work in Jira and deployed the application to AWS using Git, GitHub Actions, Nginx, PM2 and CI/CD workflows."
+    },
+    {
+      "name": "Applied Machine Learning",
+      "context": "2026",
+      "sub": "Academic project, QUT",
+      "tech": "Python, PyTorch, Hugging Face Transformers, scikit-learn",
+      "desc": "Completed an end-to-end machine learning project covering data preparation, data modelling, model training and evaluation. Built a foundation in modern machine learning workflows and AI applications."
+    },
+    {
+      "name": "Huddel: Goal Tracking and Support Platform",
+      "context": "2026",
+      "sub": "UX Designer, QUT",
+      "tech": "Figma, Figma Make (AI)",
+      "desc": "Applied human-centred design through user research, personas, user journeys, wireframing, prototyping and usability testing to design a user-focused goal-tracking and support experience."
+    },
+    {
+      "name": "Solar Battery Decision Support",
+      "context": "2025",
+      "sub": "UX Researcher and Designer, QUT",
+      "tech": "Figma, User Research",
+      "desc": "Investigated how users interact with solar-battery adoption information, ROI calculation and purchasing pathways through user research, journey design, wireframing, prototyping and usability evaluation."
+    },
+    {
+      "name": "Indigenous Health Dashboard",
+      "context": "2025",
+      "sub": "Data Analyst, QUT",
+      "tech": "Tableau",
+      "desc": "Analysed health data and built interactive dashboards and visualisations to communicate insights and support data-driven decision-making."
+    },
+    {
+      "name": "Artwork Rental Platform",
+      "context": "2025",
+      "sub": "Full-Stack Developer, QUT",
+      "tech": "Python, Flask, MySQL",
+      "desc": "Designed and developed an artwork rental and booking web application, focusing on rental workflows, database-driven functionality and user experience."
+    },
+    {
+      "name": "High Street Gym Management System",
+      "context": "2025",
+      "sub": "Full-Stack Developer, TAFE Queensland",
+      "tech": "React, Node.js, Express.js, MySQL, REST APIs, MVC",
+      "desc": "Designed and developed a class-booking web application with MVC architecture. Implemented form, API and back-end data validation while translating business requirements into an intuitive user interface."
+    },
+    {
+      "name": "Custom Shirt E-commerce Website",
+      "context": "2025",
+      "sub": "WordPress Developer, TAFE Queensland",
+      "tech": "WordPress, WooCommerce, PHP",
+      "desc": "Developed and customised an e-commerce website. Integrated third-party plugins and built custom plugins to support commercial workflows and business requirements."
+    },
+    {
+      "name": "Household Energy Tracking in Australia",
+      "context": "2024",
+      "sub": "Web Developer, TAFE Queensland",
+      "tech": "Node.js, Express.js, JavaScript, HTML/CSS, MySQL, REST APIs",
+      "desc": "Developed a data-driven web application to track household appliances and electricity consumption and compare energy usage across Australian states."
+    },
+    {
+      "name": "Eyewear and Trans-Siberian Trip Websites",
+      "context": "2024",
+      "sub": "Web Designer, TAFE Queensland",
+      "tech": "Figma",
+      "desc": "Designed a responsive eyewear website and an information-focused travel website, focusing on visual hierarchy, information architecture, navigation and user experience."
+    }
+  ]
+}
+</script>
+<script id="resume-app">
+(function(){
+  var state = JSON.parse(document.getElementById('resume-data').textContent);
+  var editing = false, dirty = false, readOnly = false, canEdit = false;
+  var artifactApi = null, downloadsApi = null;
+  var root = document.getElementById('root');
+
+  var ICON = {
+    phone: '<svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>',
+    mail: '<svg viewBox="0 0 24 24"><path d="M3 5h18c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1H3c-.6 0-1-.4-1-1V6c0-.6.4-1 1-1zm9 7.2L4.2 7v1.8L12 14l7.8-5.2V7z"/></svg>',
+    pin: '<svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>',
+    link: '<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 6h-2.9a15.6 15.6 0 0 0-1.4-3.6A8 8 0 0 1 18.9 8zM12 4c.8 1.2 1.5 2.5 1.9 4h-3.8c.4-1.5 1.1-2.8 1.9-4zM4.3 14a8 8 0 0 1 0-4h3.4a16.5 16.5 0 0 0 0 4zm.8 2h2.9c.3 1.3.8 2.5 1.4 3.6A8 8 0 0 1 5.1 16zM8 8H5.1a8 8 0 0 1 4.3-3.6C8.8 5.5 8.3 6.7 8 8zm4 12c-.8-1.2-1.5-2.5-1.9-4h3.8c-.4 1.5-1.1 2.8-1.9 4zm2.3-6H9.7a14.7 14.7 0 0 1 0-4h4.6a14.7 14.7 0 0 1 0 4zm.3 5.6c.6-1.1 1.1-2.3 1.4-3.6h2.9a8 8 0 0 1-4.3 3.6zm1.7-5.6a16.5 16.5 0 0 0 0-4h3.4a8 8 0 0 1 0 4z"/></svg>',
+    code: '<svg viewBox="0 0 24 24"><path d="M8.7 16.6 4.1 12l4.6-4.6L7.3 6l-6 6 6 6zm6.6 0 4.6-4.6-4.6-4.6L16.7 6l6 6-6 6z"/></svg>',
+    person: '<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4.2"/><path d="M3.5 21c0-4.7 3.8-7.5 8.5-7.5s8.5 2.8 8.5 7.5z"/></svg>',
+    case: '<svg viewBox="0 0 24 24"><path d="M9 3h6a2 2 0 0 1 2 2v1h3a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3V5a2 2 0 0 1 2-2zm0 3h6V5H9zm-5 6v2h16v-2z"/></svg>',
+    handshake: '<svg viewBox="0 0 24 24"><path d="M3 21V9l6-4v4l6-4v4h6v12zm4-3h2v-3H7zm4 0h2v-3h-2zm4 0h2v-3h-2z"/></svg>',
+    cap: '<svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9zM5 13.2V17c0 1.7 3.1 3.5 7 3.5s7-1.8 7-3.5v-3.8l-7 3.8z"/></svg>'
+  };
+
+  function esc(s){return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function getPath(p){var parts = p.split('.'), o = state;for (var i = 0; i < parts.length; i++){if (o == null) return '';o = o[parts[i]];}return o == null ? '' : o;}
+  function setPath(p, v){var parts = p.split('.'), o = state;for (var i = 0; i < parts.length - 1; i++){o = o[parts[i]];}o[parts[parts.length - 1]] = v;}
+  function f(tag, path, cls, ph){
+    var ce = editing ? ' contenteditable="plaintext-only" spellcheck="true"' : '';
+    return '<' + tag + ' data-k="' + path + '" data-ph="' + esc(ph || '') + '"' + (cls ? ' class="' + cls + '"' : '') + ce + '>' + esc(getPath(path)) + '</' + tag + '>';
+  }
+  function sentences(t){return String(t || '').split(/(?<=\.)\s+(?=[A-Z])/).filter(function(s){return s.trim();});}
+  function contactItem(icon, path, ph, isLink){
+    var v = getPath(path);
+    if (!editing && !v) return '';
+    var body;
+    if (!editing && isLink){var href = /^https?:\/\//.test(v) ? v : 'https://' + v;body = '<span><a href="' + esc(href) + '" target="_blank" rel="noopener">' + esc(v) + '</a></span>';}
+    else body = f('span', path, '', ph);
+    return '<li>' + ICON[icon] + body + '</li>';
+  }
+  function delBtn(list, i, label){return editing ? '<button type="button" class="del" data-del="' + list + '" data-i="' + i + '" aria-label="' + label + '">✕</button>' : '';}
+  function addBtn(list, label){return editing ? '<button type="button" class="add" data-add="' + list + '">+ ' + label + '</button>' : '';}
+
+  function entrySection(title, icon, list, addLabel){
+    var h = '<section><span class="icon">' + icon + '</span><h2>' + title + '</h2><div class="entries">';
+    state[list].forEach(function(p, i){
+      var b = list + '.' + i + '.';
+      h += '<div class="entry">';
+      h += '<div class="row">' + f('span', b + 'name', 'e-title', 'Project name') + f('span', b + 'context', 'e-when hide-empty', 'Year') + '</div>';
+      h += f('div', b + 'sub', 'e-sub hide-empty', 'Your role, where');
+      h += f('div', b + 'tech', 'tech hide-empty', 'Technologies');
+      if (editing) h += f('p', b + 'desc', 'desc', 'What you did (each sentence becomes a bullet)');
+      else {var ss = sentences(p.desc);if (ss.length) h += '<ul class="pts">' + ss.map(function(x){return '<li>' + esc(x) + '</li>';}).join('') + '</ul>';}
+      h += delBtn(list, i, 'Remove');
+      h += '</div>';
+    });
+    return h + '</div>' + addBtn(list, addLabel) + '</section>';
+  }
+
+  function render(){
+    var h = '';
+    h += '<div class="bar"><div class="bar-in">';
+    h += '<div class="bar-title">Resume <span id="status" class="status"></span></div>';
+    if (canEdit){
+      h += '<button id="btn-edit" type="button">' + (editing ? 'Done editing' : 'Edit') + '</button>';
+      h += '<button id="btn-save" type="button"' + (dirty && !readOnly ? '' : ' disabled') + '>Save changes</button>';
+    }
+    h += '<button id="btn-pdf" class="primary" type="button">Download PDF</button>';
+    h += '</div>';
+    if (editing) h += '<p class="note">Click any text to change it. Press Save changes to keep your edits for everyone who opens this link.</p>';
+    h += '</div>';
+
+    h += '<div class="wrap"><article class="sheet' + (editing ? ' editing' : '') + '">';
+    h += '<header class="top">' + f('h1', 'name', 'name', 'Your name') + f('p', 'role', 'role', 'Role') + '</header>';
+    h += '<div class="cols">';
+
+    /* left column */
+    h += '<aside class="side">';
+    h += '<section><h2>Contact</h2><ul class="clist">';
+    h += contactItem('phone', 'phone', 'Phone (optional)');
+    h += contactItem('mail', 'email', 'Email');
+    h += contactItem('pin', 'location', 'City');
+    h += contactItem('link', 'linkedin', 'LinkedIn URL', true);
+    h += contactItem('code', 'github', 'GitHub URL', true);
+    h += '</ul></section>';
+
+    h += '<section><h2>Skills</h2><div class="sk">';
+    state.skills.forEach(function(s, i){
+      h += '<div class="entry-s" style="position:relative">' + f('div', 'skills.' + i + '.label', 'sk-label', 'Group') + f('p', 'skills.' + i + '.items', 'sk-items', 'Skills, comma separated') + delBtn('skills', i, 'Remove skill group') + '</div>';
+    });
+    h += '</div>' + addBtn('skills', 'Add skill group') + '</section>';
+
+    h += '<section><h2>Languages</h2><ul class="bul">';
+    state.languages.forEach(function(l, i){h += '<li style="position:relative">' + f('span', 'languages.' + i + '.text', '', 'Language (level)') + delBtn('languages', i, 'Remove language') + '</li>';});
+    h += '</ul>' + addBtn('languages', 'Add language') + '</section>';
+
+    h += '<section><h2>Community &amp; Involvement</h2><div class="sk">';
+    state.community.forEach(function(c, i){
+      h += '<div style="position:relative">' + f('div', 'community.' + i + '.role', 'sk-label', 'Role') + f('p', 'community.' + i + '.org', 'sk-items', 'Club or organisation') + f('p', 'community.' + i + '.dates', 'sk-items c-dates hide-empty', 'Dates') + delBtn('community', i, 'Remove item') + '</div>';
+    });
+    h += '</div>' + addBtn('community', 'Add involvement') + '</section>';
+    h += '</aside>';
+
+    /* right column with timeline */
+    h += '<div class="main">';
+    h += '<section><span class="icon">' + ICON.person + '</span><h2>Profile</h2>' + f('p', 'summary', 'profile', 'Short professional summary') + '</section>';
+
+    h += '<section><span class="icon">' + ICON.cap + '</span><h2>Education</h2><div class="entries">';
+    state.education.forEach(function(e, i){
+      h += '<div class="entry">';
+      h += '<div class="row">' + f('span', 'education.' + i + '.degree', 'e-title', 'Degree') + f('span', 'education.' + i + '.dates', 'e-when hide-empty', 'Years') + '</div>';
+      h += f('div', 'education.' + i + '.school', 'e-sub', 'School');
+      h += f('p', 'education.' + i + '.note', 'desc hide-empty', 'Optional note');
+      h += delBtn('education', i, 'Remove education');
+      h += '</div>';
+    });
+    h += '</div>' + addBtn('education', 'Add education') + '</section>';
+    h += entrySection('Industry Project', ICON.handshake, 'industry', 'Add industry project');
+    h += entrySection('Projects', ICON.case, 'projects', 'Add project');
+
+    h += '</div>';
+
+    h += '</div></article></div>';
+    root.innerHTML = h;
+    setStatus();
+    wire();
+  }
+
+  function setStatus(msg, kind){
+    var el = document.getElementById('status');
+    if (!el) return;
+    if (msg){el.textContent = msg;el.className = 'status' + (kind ? ' ' + kind : '');return;}
+    if (!canEdit){el.textContent = '';el.className = 'status';}
+    else if (readOnly){el.textContent = 'View only';el.className = 'status';}
+    else if (dirty){el.textContent = 'Unsaved changes';el.className = 'status warn';}
+    else {el.textContent = '';el.className = 'status';}
+  }
+
+  function markDirty(){if (!dirty){dirty = true;var b = document.getElementById('btn-save');if (b && !readOnly) b.disabled = false;setStatus();}}
+
+  function wire(){
+    if (canEdit){
+      document.getElementById('btn-edit').onclick = function(){editing = !editing;render();};
+      document.getElementById('btn-save').onclick = save;
+    }
+    document.getElementById('btn-pdf').onclick = downloadPdf;
+    root.querySelectorAll('[data-k][contenteditable]').forEach(function(el){
+      el.addEventListener('input', function(){setPath(el.getAttribute('data-k'), el.textContent.replace(/\s+/g, ' ').trim());markDirty();});
+      el.addEventListener('keydown', function(ev){if (ev.key === 'Enter'){ev.preventDefault();el.blur();}});
+      el.addEventListener('paste', function(ev){
+        ev.preventDefault();
+        var t = (ev.clipboardData || window.clipboardData).getData('text/plain').replace(/\s+/g, ' ');
+        document.execCommand('insertText', false, t);
+      });
+    });
+    root.querySelectorAll('[data-del]').forEach(function(b){
+      b.onclick = function(){state[b.getAttribute('data-del')].splice(+b.getAttribute('data-i'), 1);dirty = true;render();};
+    });
+    root.querySelectorAll('[data-add]').forEach(function(b){
+      b.onclick = function(){
+        var k = b.getAttribute('data-add');
+        if (k === 'education') state.education.push({school: '', degree: '', dates: '', note: ''});
+        if (k === 'projects') state.projects.push({name: '', context: '', sub: '', tech: '', desc: ''});
+        if (k === 'skills') state.skills.push({label: '', items: ''});
+        if (k === 'languages') state.languages.push({text: ''});
+        if (k === 'community') state.community.push({role: '', org: '', dates: ''});
+        if (k === 'industry') state.industry.push({name: '', context: '', sub: '', tech: '', desc: ''});
+        dirty = true;render();
+      };
+    });
+  }
+
+  function buildDocument(){
+    var css = document.getElementById('resume-css').textContent;
+    var js = document.getElementById('resume-app').textContent;
+    var data = JSON.stringify(state, null, 2).replace(/</g, '\\u003c');
+    var S = 'script';
+    return '<!doctype html>\n<html lang="en"><head><meta charset="utf-8">' +
+      '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">' +
+      '<title>' + esc(document.title || 'Resume') + '</title>' +
+      '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' +
+      '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700;800&family=Lato:ital,wght@0,400;0,700;1,400&display=swap">' +
+      '<style id="resume-css">' + css + '</style></head><body>\n<div id="root"></div>\n' +
+      '<' + S + ' src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></' + S + '>\n' +
+      '<' + S + ' type="application/json" id="resume-data">\n' + data + '\n</' + S + '>\n' +
+      '<' + S + ' id="resume-app">' + js + '</' + S + '>\n</body></html>';
+  }
+
+  function save(){
+    if (!dirty || readOnly) return;
+    if (!artifactApi){setStatus('Saving is not available in this view', 'warn');return;}
+    var b = document.getElementById('btn-save');
+    if (b) b.disabled = true;
+    setStatus('Saving…');
+    artifactApi.publish(buildDocument()).then(function(){dirty = false;setStatus('Saved', 'ok');}).catch(function(err){
+      var code = err && err.code;
+      if (code === 'not_writer' || code === 'not_granted' || code === 'consent_required' || code === 'not_declared' || code === 'capability_disabled'){
+        readOnly = true;setStatus('View only. Your edits stay on this screen but cannot be saved.', 'warn');
+      } else if (code === 'conflict'){setStatus('A newer version was saved elsewhere. Reloading…', 'warn');}
+      else if (code === 'rate_limited'){setStatus('Saving too often. Wait a moment and try again.', 'warn');if (b) b.disabled = false;}
+      else {setStatus('Could not save. Try again.', 'warn');if (b) b.disabled = false;}
+    });
+  }
+
+  /* ---------- PDF: same two-column layout, real text ---------- */
+  function clean(s){
+    return String(s || '').replace(/[‘’]/g, "'").replace(/[“”]/g, '"').replace(/…/g, '...').replace(/ /g, ' ')
+      .replace(/[^\x09\x0A\x0D\x20-\x7E -ÿ–—•]/g, '');
+  }
+
+  function makePdf(){
+    var J = window.jspdf && window.jspdf.jsPDF;
+    if (!J) throw new Error('nolib');
+    var doc = new J({unit: 'pt', format: 'a4'});
+    var W = doc.internal.pageSize.getWidth(), H = doc.internal.pageSize.getHeight();
+    var M = 40, TOPM = 36, BOT = 34;
+    var NAVY = [43, 52, 69], INK = [42, 51, 66], MUTED = [94, 104, 120];
+    var LX = M, LW = 150, GAP = 22;
+    var TL = LX + LW + GAP + 10;            /* timeline x */
+    var RX = TL + 22, RW = W - M - RX;      /* right column */
+
+    function col(c){doc.setTextColor(c[0], c[1], c[2]);}
+    function fill(c){doc.setFillColor(c[0], c[1], c[2]);}
+    function draw(c){doc.setDrawColor(c[0], c[1], c[2]);}
+
+    /* header */
+    var y = TOPM;
+    doc.setFont('helvetica', 'bold');doc.setFontSize(28);col(NAVY);
+    doc.text(clean(state.name).toUpperCase(), M, y + 24, {charSpace: 0.6});
+    y += 42;
+    doc.setFont('helvetica', 'normal');doc.setFontSize(12);col(INK);
+    doc.text(clean(state.role).toUpperCase(), M, y, {charSpace: 0.8});
+    y += 14;
+    draw(NAVY);doc.setLineWidth(1.4);doc.line(M, y, W - M, y);
+    var bodyTop = y + 24;
+
+    /* ---- left column (page 1) ---- */
+    var ly = bodyTop;
+    function lHead(t){
+      doc.setFont('helvetica', 'bold');doc.setFontSize(12);col(NAVY);
+      doc.text(clean(t).toUpperCase(), LX, ly + 11, {charSpace: 1.4});
+      ly += 18;draw(NAVY);doc.setLineWidth(1);doc.line(LX, ly, LX + LW, ly);ly += 10;
+    }
+    function lText(t, size, style, c, indent){
+      t = clean(t);if (!t) return;
+      doc.setFont('helvetica', style || 'normal');doc.setFontSize(size);col(c || INK);
+      var lines = doc.splitTextToSize(t, LW - (indent || 0));
+      lines.forEach(function(line){doc.text(line, LX + (indent || 0), ly + size);ly += size * 1.35;});
+    }
+    function glyph(kind, x, cy){
+      fill(NAVY);
+      if (kind === 'phone'){doc.roundedRect(x + 1.5, cy - 4.5, 5, 9, 1.2, 1.2, 'F');}
+      else if (kind === 'mail'){doc.rect(x, cy - 3.2, 8, 6, 'F');}
+      else if (kind === 'pin'){doc.circle(x + 4, cy - 1, 3, 'F');doc.triangle(x + 1.3, cy, x + 6.7, cy, x + 4, cy + 4.5, 'F');}
+      else {doc.circle(x + 4, cy, 3.6, 'F');}
+    }
+    lHead('Contact');
+    [['phone', state.phone], ['mail', state.email], ['pin', state.location], ['link', state.linkedin], ['code', state.github]].forEach(function(r){
+      var v = clean(r[1]);if (!v) return;
+      doc.setFont('helvetica', 'normal');doc.setFontSize(8.6);col(INK);
+      var lines = doc.splitTextToSize(v, LW - 16);
+      glyph(r[0], LX, ly + 5.5);
+      lines.forEach(function(line, i){doc.text(line, LX + 16, ly + 8.6 + i * 11);});
+      ly += 11 * lines.length + 6;
+    });
+    ly += 12;
+    lHead('Skills');
+    state.skills.forEach(function(s){
+      if (!clean(s.label) && !clean(s.items)) return;
+      lText(s.label, 8.8, 'bold', NAVY);
+      lText(s.items, 8.6, 'normal', INK);
+      ly += 5;
+    });
+    ly += 10;
+    if (state.languages.some(function(l){return clean(l.text);})){
+      lHead('Languages');
+      state.languages.forEach(function(l){
+        var t = clean(l.text);if (!t) return;
+        fill(INK);doc.circle(LX + 2.5, ly + 5.6, 1.3, 'F');
+        doc.setFont('helvetica', 'normal');doc.setFontSize(8.8);col(INK);doc.text(t, LX + 10, ly + 8.8);ly += 13;
+      });
+    }
+    if (state.community.some(function(c){return clean(c.role) || clean(c.org);})){
+      ly += 12;
+      lHead('Community');
+      state.community.forEach(function(c){
+        if (!clean(c.role) && !clean(c.org)) return;
+        lText(c.role, 8.8, 'bold', NAVY);
+        lText(c.org, 8.6, 'normal', INK);
+        if (clean(c.dates)) lText(c.dates, 8.2, 'normal', MUTED);
+        ly += 5;
+      });
+    }
+
+    /* ---- right column with timeline, flows across pages ---- */
+    var y2 = bodyTop, pageTop = bodyTop, page = 1;
+    var segs = [];
+    function newPage(){segs.push([page, pageTop, H - BOT]);doc.addPage();page++;y2 = TOPM + 6;pageTop = TOPM;}
+    function need(h){if (y2 + h > H - BOT) newPage();}
+    function rText(t, size, style, c, indent, justify){
+      t = clean(t);if (!t) return;
+      doc.setFont('helvetica', style || 'normal');doc.setFontSize(size);col(c || INK);
+      var w = RW - (indent || 0);
+      var lines = doc.splitTextToSize(t, w), lh = size * 1.38;
+      lines.forEach(function(line, i){
+        need(lh);
+        var opts = (justify && i < lines.length - 1) ? {maxWidth: w, align: 'justify'} : {};
+        doc.text(line, RX + (indent || 0), y2 + size, opts);
+        y2 += lh;
+      });
+    }
+    var marks = [];
+    function icon(kind, cy){marks.push({pg: page, t: 'icon', kind: kind, cy: cy});}
+    function dot(cy){marks.push({pg: page, t: 'dot', cy: cy});}
+    function drawIcon(kind, cy){
+      fill(NAVY);doc.circle(TL, cy, 9, 'F');
+      doc.setFillColor(255, 255, 255);
+      if (kind === 'person'){doc.circle(TL, cy - 2.4, 2.4, 'F');doc.ellipse(TL, cy + 4, 4.4, 2.6, 'F');fill(NAVY);doc.rect(TL - 5, cy + 4.2, 10, 3, 'F');}
+      else if (kind === 'build'){doc.rect(TL - 4.5, cy - 2, 9, 6.5, 'F');doc.triangle(TL - 5, cy - 1.6, TL + 5, cy - 1.6, TL, cy - 5.2, 'F');}
+      else if (kind === 'case'){doc.rect(TL - 4.6, cy - 2.2, 9.2, 6.2, 'F');doc.rect(TL - 2, cy - 4.2, 4, 1.6, 'F');}
+      else {doc.triangle(TL - 5.5, cy - 0.6, TL + 5.5, cy - 0.6, TL, cy - 4.4, 'F');doc.triangle(TL - 5.5, cy - 0.6, TL + 5.5, cy - 0.6, TL, cy + 2.8, 'F');doc.rect(TL - 3, cy + 0.6, 6, 3.4, 'F');}
+    }
+    function rHead(t, kind){
+      need(46);
+      icon(kind, y2 + 7);
+      doc.setFont('helvetica', 'bold');doc.setFontSize(12.5);col(NAVY);
+      doc.text(clean(t).toUpperCase(), RX, y2 + 12, {charSpace: 1.4});
+      y2 += 19;draw(NAVY);doc.setLineWidth(1);doc.line(RX, y2, RX + RW, y2);y2 += 9;
+    }
+    function drawDot(cy){doc.setFillColor(255, 255, 255);draw(NAVY);doc.setLineWidth(1);doc.circle(TL, cy, 2.8, 'FD');}
+    function rowLR(left, right, size){
+      left = clean(left);right = clean(right);
+      doc.setFontSize(size);doc.setFont('helvetica', 'normal');
+      var rw = right ? doc.getTextWidth(right) : 0;
+      doc.setFont('helvetica', 'bold');
+      var lines = doc.splitTextToSize(left, RW - rw - (right ? 12 : 0)), lh = size * 1.32;
+      need(lh * lines.length + 12);
+      dot(y2 + size * 0.62);
+      col(NAVY);
+      lines.forEach(function(line, i){doc.text(line, RX, y2 + size + i * lh);});
+      if (right){doc.setFont('helvetica', 'normal');col(INK);doc.text(right, RX + RW, y2 + size, {align: 'right'});}
+      y2 += lh * lines.length;
+    }
+    function bullets(text){
+      sentences(clean(text)).forEach(function(s){
+        doc.setFont('helvetica', 'normal');doc.setFontSize(8.9);
+        var lines = doc.splitTextToSize(s, RW - 12), lh = 8.9 * 1.36;
+        need(lh);
+        fill(INK);doc.circle(RX + 4, y2 + 5.8, 1.2, 'F');
+        col(INK);
+        lines.forEach(function(line, i){
+          need(lh);
+          var opts = i < lines.length - 1 ? {maxWidth: RW - 12, align: 'justify'} : {};
+          doc.text(line, RX + 12, y2 + 8.9, opts);y2 += lh;
+        });
+        y2 += 1;
+      });
+    }
+
+    if (clean(state.summary)){rHead('Profile', 'person');rText(state.summary, 9.2, 'normal', INK, 0, true);y2 += 10;}
+
+    function entries(title, kind, list){
+      if (!list.length) return;
+      rHead(title, kind);
+      list.forEach(function(p, i){
+        if (i) y2 += 5;
+        rowLR(p.name, p.context, 10);
+        if (clean(p.sub)) rText(p.sub, 9.3, 'normal', INK);
+        if (clean(p.tech)) rText(p.tech, 8.4, 'italic', MUTED);
+        y2 += 2;
+        bullets(p.desc);
+      });
+      y2 += 10;
+    }
+
+    if (state.education.length){
+      rHead('Education', 'cap');
+      state.education.forEach(function(e, i){
+        if (i) y2 += 5;
+        rowLR(e.degree, e.dates, 10);
+        rText(e.school, 9.3, 'normal', INK);
+        if (clean(e.note)) rText(e.note, 8.6, 'normal', MUTED);
+      });
+    }
+    y2 += 10;
+    entries('Industry Project', 'build', state.industry);
+    entries('Projects', 'case', state.projects);
+
+    segs.push([page, pageTop, y2 + 4]);
+
+    /* draw timeline lines under the icons */
+    segs.forEach(function(sg){
+      doc.setPage(sg[0]);draw(NAVY);doc.setLineWidth(1);
+      doc.line(TL, sg[1] + (sg[0] === 1 ? 16 : 0), TL, sg[2]);
+    });
+    /* markers go on top of the line */
+    marks.forEach(function(m){
+      doc.setPage(m.pg);
+      if (m.t === 'icon') drawIcon(m.kind, m.cy); else drawDot(m.cy);
+    });
+    var n = doc.getNumberOfPages();
+    for (var pg = 1; pg <= n; pg++){
+      doc.setPage(pg);doc.setFont('helvetica', 'normal');doc.setFontSize(7.5);col(MUTED);
+      doc.text(clean(state.name) + '  ·  ' + pg + ' / ' + n, W - M, H - 20, {align: 'right'});
+    }
+    return doc;
+  }
+
+  function fileName(){
+    var base = clean(state.name).replace(/\([^)]*\)/g, '').trim().replace(/\s+/g, '-').replace(/[^A-Za-z0-9-]/g, '');
+    return (base || 'Resume') + '-Resume.pdf';
+  }
+
+  function downloadPdf(){
+    var doc;
+    try {doc = makePdf();}
+    catch (e){setStatus('PDF tools did not load. Refresh the page and try again.', 'warn');return;}
+    if (!downloadsApi){
+      if (!(window.claude && typeof window.claude.use === 'function')){doc.save(fileName());setStatus('PDF saved', 'ok');return;}
+      setStatus('Downloads are not available in this view', 'warn');return;
+    }
+    setStatus('Preparing PDF…');
+    downloadsApi.save({filename: fileName(), data: doc.output('blob')}).then(function(){setStatus('PDF saved', 'ok');}).catch(function(err){
+      var code = err && err.code;
+      if (code === 'declined') setStatus();
+      else if (code === 'rate_limited') setStatus('A save prompt is already open', 'warn');
+      else setStatus('Download is not available here', 'warn');
+    });
+  }
+
+  render();
+
+  if (window.claude && typeof window.claude.use === 'function'){
+    window.claude.use('user').then(function(u){
+      if (!u) return false;
+      return u.canEdit();
+    }).then(function(ok){
+      if (ok === true && !canEdit){canEdit = true;render();}
+    }).catch(function(){});
+    window.claude.use('artifact').then(function(a){artifactApi = a;if (!a){readOnly = true;setStatus();var b = document.getElementById('btn-save');if (b) b.disabled = true;}}).catch(function(){});
+    window.claude.use('downloads').then(function(d){downloadsApi = d;}).catch(function(){});
+  } else {readOnly = true;setStatus();}
+})();
+</script>
+
+</body>
+</html>
