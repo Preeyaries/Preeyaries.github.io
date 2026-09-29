@@ -10,6 +10,7 @@ var ROLES = [
 /* Real photos. Each file is a cut-out on a transparent square 1.4x the circle,
    with the circle in the middle, so the head and props can pop out of the circle. */
 var PHOTOS = {
+  student: 'assets/img/student-pop.webp',
   artist: 'assets/img/artist-pop.webp',
   data: 'assets/img/data-pop2.webp'
 };
