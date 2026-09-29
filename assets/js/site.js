@@ -11,7 +11,7 @@ var ROLES = [
    with the circle in the middle, so the head and props can pop out of the circle. */
 var PHOTOS = {
   artist: 'assets/img/artist-pop.webp',
-  data: 'assets/img/data-pop.webp'
+  data: 'assets/img/data-pop2.webp'
 };
   function shade(hex, amt){
   var n = parseInt(hex.slice(1), 16), r = n >> 16, g = (n >> 8) & 255, b = n & 255;
