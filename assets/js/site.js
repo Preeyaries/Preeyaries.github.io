@@ -7,12 +7,20 @@ var ROLES = [
   {key:'hobby', label:'Hobby', color:'#a8456a'},
   {key:'artist', label:'Artist', color:'#8b5020'}
 ];
+/* Real photos (cut-out, transparent background). Add a role here when its photo is ready. */
+var PHOTOS = {
+  artist: 'assets/img/artist.webp'
+};
   function shade(hex, amt){
   var n = parseInt(hex.slice(1), 16), r = n >> 16, g = (n >> 8) & 255, b = n & 255;
   r = Math.round(r * (1 - amt)); g = Math.round(g * (1 - amt)); b = Math.round(b * (1 - amt));
   return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
 function avatar(kind, color){
+  if (PHOTOS[kind]){
+    var root = document.body.getAttribute('data-root') || '';
+    return '<img class="photo" src="' + root + PHOTOS[kind] + '" alt="" draggable="false">';
+  }
   var dark = shade(color, 0.45), W = '#ffffff';
   var bg = kind === 'me' ? '#ffffff' : color;
   var hair = kind === 'me' ? '#2b2b30' : dark;
