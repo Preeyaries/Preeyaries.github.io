@@ -7,9 +7,10 @@ var ROLES = [
   {key:'hobby', label:'Hobby', color:'#a8456a'},
   {key:'artist', label:'Artist', color:'#8b5020'}
 ];
-/* Real photos (cut-out, transparent background). Add a role here when its photo is ready. */
+/* Real photos. Each file is a cut-out on a transparent square 1.4x the circle,
+   with the circle in the middle, so the head and props can pop out of the circle. */
 var PHOTOS = {
-  artist: 'assets/img/artist.webp'
+  artist: 'assets/img/artist-pop.webp'
 };
   function shade(hex, amt){
   var n = parseInt(hex.slice(1), 16), r = n >> 16, g = (n >> 8) & 255, b = n & 255;
@@ -19,7 +20,7 @@ var PHOTOS = {
 function avatar(kind, color){
   if (PHOTOS[kind]){
     var root = document.body.getAttribute('data-root') || '';
-    return '<img class="photo" src="' + root + PHOTOS[kind] + '" alt="" draggable="false">';
+    return '<img class="photo-pop" src="' + root + PHOTOS[kind] + '" alt="" draggable="false">';
   }
   var dark = shade(color, 0.45), W = '#ffffff';
   var bg = kind === 'me' ? '#ffffff' : color;
@@ -78,7 +79,7 @@ function avatar(kind, color){
   if (kind === 'me'){
     s += '<g fill="#b9b6b0"><path d="M152 46 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z"/><path d="M44 62 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z"/></g>';
   }
-  return s + '</svg>';
+  return '<div class="av-round">' + s + '</svg></div>';
 }
 
 document.querySelectorAll('[data-avatar]').forEach(function(el){
