@@ -1,11 +1,11 @@
 (function(){
+  var ROLES = window.ROLES.filter(function(r){ return r.key !== 'hobby'; });
   /* ---------- mini game ---------- */
   var QS = [
     {q:'Deployed an app to AWS with GitHub Actions', a:'Com Sci Student'},
     {q:'Mixes colours on a palette on the weekend', a:'Artist'},
     {q:'Moved from Bangkok to Brisbane', a:'Traveller'},
     {q:'Tested a prototype with real users in Figma', a:'Web designer'},
-    {q:'Has a playlist for every mood', a:'Hobby'},
     {q:'Trained a model with Hugging Face Transformers', a:'Com Sci Student'},
     {q:'Designed the chat screen for an AI farm assistant', a:'Web designer'}
   ];
