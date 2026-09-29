@@ -170,3 +170,12 @@ a{color:inherit}
 .photo-pop{position:absolute;left:-20%;top:-20%;width:140%;height:140%;max-width:none;display:block;user-select:none;pointer-events:none;filter:drop-shadow(0 6px 10px rgba(0,0,0,.18))}
 .orb-zone{margin-left:5%;margin-top:32px}
 @media (max-width:760px){.orb-zone{margin-left:0;margin-top:64px;width:min(78vw,360px)}}
+
+/* mobile: role names become a row of pills under the circle instead of an arc */
+@media (max-width:760px){
+  .roles{height:auto;display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:52px}
+  .roles li{position:static;transform:none!important;opacity:1!important}
+  .roles button{font-size:14px;font-weight:600;color:var(--soft);border:1.5px solid var(--hair);border-radius:999px;padding:7px 14px}
+  .roles li.active button{font-size:14px;color:#fff;background:var(--role);border-color:var(--role)}
+  .dial-foot{justify-content:center;margin-top:18px}
+}
