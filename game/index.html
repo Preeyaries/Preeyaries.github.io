@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mini game · Preeyanan</title>
+<meta name="description" content="Guess which side of Preeyanan each fact comes from.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body id="top" data-root="../">
+<nav class="nav" aria-label="Main">
+  <div class="wrap nav-row">
+    <a class="brand" href="../">Preeyanan</a>
+    <div class="nav-links"><a href="../student/">Student</a><a href="../designer/">Designer</a><a href="../artist/">Artist</a><a href="../traveller/">Traveller</a><a href="../hobby/">Hobby</a><span class="sep" aria-hidden="true"></span><a href="../profile/">Profile</a><a href="../game/" aria-current="page">Mini game</a><a href="../resume/">Resume</a></div>
+  </div>
+  <div class="wrap"><div class="nav-rule"></div></div>
+</nav>
+<main>
+<section class="page-body">
+  <div class="wrap">
+    <h1 class="ch-title">Mini game</h1>
+    <p class="ch-lead">Which side of me does this come from? Guess the role.</p>
+    <div class="game" style="margin-top:22px">
+      <p class="q" id="g-q"></p>
+      <div class="game-row" id="g-opts"></div>
+      <p class="res" id="g-res" aria-live="polite"></p>
+      <div class="game-row"><span class="muted" id="g-score">Score 0 / 0</span><button type="button" id="g-next">Next question</button></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="foot"><div class="wrap"><span>Preeyanan Khamfoei · Brisbane</span><span><a href="../profile/">Contact</a> · <a href="#top">Back to top ↑</a></span></div></footer>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/game.js"></script>
+</body>
+</html>
