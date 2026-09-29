@@ -6,7 +6,8 @@
     {q:'Mixes colours on a palette on the weekend', a:'Artist'},
     {q:'Moved from Bangkok to Brisbane', a:'Traveller'},
     {q:'Tested a prototype with real users in Figma', a:'Web designer'},
-    {q:'Trained a model with Hugging Face Transformers', a:'Com Sci Student'},
+    {q:'Trained a model with Hugging Face Transformers', a:'Data scientist'},
+    {q:'Built a Tableau dashboard from health data', a:'Data scientist'},
     {q:'Designed the chat screen for an AI farm assistant', a:'Web designer'}
   ];
   var gi = -1, score = 0, total = 0, answered = false;

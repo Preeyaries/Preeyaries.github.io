@@ -1,6 +1,7 @@
 /* Shared by every page: role list, placeholder cartoon avatars (swap for photos later). */
 var ROLES = [
   {key:'student', label:'Com Sci Student', color:'#4f5263'},
+  {key:'data', label:'Data scientist', color:'#4a2a6e'},
   {key:'designer', label:'Web designer', color:'#2f6f9f'},
   {key:'traveller', label:'Traveller', color:'#43843f'},
   {key:'hobby', label:'Hobby', color:'#a8456a'},
@@ -57,6 +58,14 @@ function avatar(kind, color){
     s += '<path d="M66 98 C66 56 134 56 134 98" stroke="' + dark + '" stroke-width="6" fill="none"/><circle cx="66" cy="102" r="9" fill="' + dark + '"/><circle cx="134" cy="102" r="9" fill="' + dark + '"/>';
     s += '<g fill="' + W + '" opacity=".95"><path d="M150 40 v26 a7 6 0 1 1 -4 -5 V34 l18 -5 v22 a7 6 0 1 1 -4 -5 V36z"/><path d="M34 50 v18 a6 5 0 1 1 -3 -4 V46 l12 -3 v4z"/></g>';
     s += '<rect x="92" y="164" width="16" height="26" rx="8" fill="' + dark + '"/><path d="M100 190 v12" stroke="' + dark + '" stroke-width="4"/>';
+  }
+  if (kind === 'data'){
+    s += '<circle cx="100" cy="50" r="12" fill="' + dark + '"/>';
+    s += '<rect x="50" y="158" width="100" height="48" rx="6" fill="' + dark + '"/>';
+    s += '<g fill="' + W + '"><rect x="62" y="182" width="10" height="16" rx="2"/><rect x="78" y="174" width="10" height="24" rx="2"/><rect x="94" y="178" width="10" height="20" rx="2"/><rect x="110" y="168" width="10" height="30" rx="2"/></g>';
+    s += '<path d="M62 176 L82 166 L98 172 L130 160" stroke="' + W + '" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/><circle cx="130" cy="160" r="3.5" fill="' + W + '"/>';
+    s += '<g stroke="' + W + '" stroke-width="2" opacity=".85" fill="none"><path d="M146 40 L168 30 M146 40 L162 60 M168 30 L162 60"/></g><g fill="' + W + '"><circle cx="146" cy="40" r="5"/><circle cx="168" cy="30" r="4"/><circle cx="162" cy="60" r="4"/></g>';
+    s += '<g stroke="' + W + '" stroke-width="2" opacity=".85" fill="none"><path d="M30 70 L48 58 L50 80 Z"/></g><g fill="' + W + '"><circle cx="30" cy="70" r="4"/><circle cx="48" cy="58" r="3.5"/><circle cx="50" cy="80" r="3.5"/></g>';
   }
   if (kind === 'me'){
     s += '<g fill="#b9b6b0"><path d="M152 46 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z"/><path d="M44 62 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z"/></g>';

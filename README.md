@@ -11,6 +11,7 @@ Personal website of Preeyanan (Ploy) Khamfoei, hosted with GitHub Pages.
 ```
 index.html              Home: hero, role circle, links to other pages
 student/index.html      Me as a Com Sci Student
+data/index.html         Me as a Data scientist
 designer/index.html     Me as a Web designer
 artist/index.html       Me as an Artist
 traveller/index.html    Me as a Traveller
