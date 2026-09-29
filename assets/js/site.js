@@ -11,6 +11,7 @@ var ROLES = [
    with the circle in the middle, so the head and props can pop out of the circle. */
 var PHOTOS = {
   student: 'assets/img/student-pop3.webp',
+  traveller: 'assets/img/traveller-pop5.webp',
   artist: 'assets/img/artist-pop.webp',
   data: 'assets/img/data-pop2.webp'
 };
