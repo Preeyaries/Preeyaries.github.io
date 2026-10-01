@@ -100,6 +100,44 @@ button[disabled]{opacity:.5;cursor:default}
 [data-k]:empty::before{content:attr(data-ph);color:#9aa4ae}
 .hide-empty:empty{display:none}
 .editing .hide-empty:empty{display:inline-block}
+
+/* ---- A4 sheet: same size and type scale as the one-page PDF ---- */
+.wrap{overflow-x:auto}
+.sheet{width:210mm;max-width:none;min-height:297mm;padding:34px 50px 26px;font-size:12px;line-height:1.32}
+.name{font-size:38px}
+.role{font-size:15px;margin-top:6px}
+.top{padding-bottom:12px}
+.cols{grid-template-columns:180px 1fr;gap:0 24px;margin-top:16px}
+.side h2,.main h2{font-size:15.5px}
+.side section{margin-bottom:18px}
+.side h2,.main h2{padding-bottom:5px;margin-bottom:9px}
+.clist{font-size:11.4px;gap:6px}
+.clist li{grid-template-columns:14px 1fr;gap:8px}
+.clist svg{width:12px;height:12px}
+.sk{gap:6px}.sk-label{font-size:11.8px}.sk-items{font-size:11.4px;line-height:1.32}
+.bul{font-size:11.6px;gap:2px}
+.main{padding-left:38px}
+.main::before{left:11px}
+.main .icon{left:-38px;width:24px;height:24px}
+.main section{margin-bottom:11px}
+.profile{font-size:12.2px}
+.entries{gap:7px}
+.entry::before{left:-31px}
+.e-title{font-size:13.3px}.e-when{font-size:12.4px}.e-sub{font-size:12.4px}
+.tech{font-size:11.2px}
+.pts{font-size:11.8px;margin-top:3px;gap:1px}
+.desc{font-size:11.4px;margin-top:2px;color:var(--muted)}
+@media (max-width:840px){
+  .sheet{width:auto;min-height:0;padding:28px 20px}
+  .cols{grid-template-columns:1fr;gap:10px}
+}
+@page{size:A4;margin:0}
+@media print{
+  body{background:#fff}
+  .bar,.note{display:none}
+  .wrap{padding:0}
+  .sheet{box-shadow:none;border-radius:0;width:210mm;height:297mm;overflow:hidden;margin:0}
+}
 </style>
 </head>
 <body>
@@ -116,7 +154,7 @@ button[disabled]{opacity:.5;cursor:default}
   "phone": "0481 224 118",
   "linkedin": "linkedin.com/in/preeyanan-khamfoei-4514aa176",
   "github": "github.com/Preeyaries",
-  "summary": "Master of Information Technology (Computer Science) student at QUT with a Diploma of Information Technology in back-end and front-end web development. I build full-stack web applications with React, Node.js, Express.js, Python and Flask, backed by MySQL and MongoDB, and I design user-focused interfaces through human-centred design in Figma. Hands-on experience deploying applications to AWS with Git, GitHub Actions, Nginx, PM2 and CI/CD workflows. Currently leading UX/UI design for an AI-powered farm assistant in an industry project with Orefox AI, and growing my skills in machine learning, NLP and data science. Seeking internship and graduate opportunities in software development, full-stack development or UX/UI design.",
+  "summary": "Master of IT (Computer Science) student at QUT with a Diploma of IT in web development. I build full-stack web apps with React, Node.js, Python and Flask, design user-focused interfaces in Figma and deploy to AWS with CI/CD. Seeking internship and graduate roles in software development, UX/UI design, data or cybersecurity.",
   "skills": [
     {
       "label": "Languages",
@@ -165,36 +203,30 @@ button[disabled]{opacity:.5;cursor:default}
   "education": [
     {
       "school": "Queensland University of Technology (QUT)",
-      "degree": "Master of Information Technology, Computer Science",
+      "degree": "Master of IT, Computer Science",
       "dates": "2025 – 2027",
-      "note": "Key units: Machine Learning, Software Life Cycle, Human-Centred Design, Object-Oriented Design, Cyber Security and Governance, IT Industry Project."
+      "note": "Key units: Machine Learning, Software Life Cycle, Human-Centred Design, Cyber Security and Governance, IT Industry Project."
     },
     {
       "school": "TAFE Queensland",
-      "degree": "Diploma of Information Technology (Back End and Front End Web Development)",
+      "degree": "Diploma of IT, Web Development",
       "dates": "2024 – 2025",
-      "note": ""
-    },
-    {
-      "school": "TAFE Queensland",
-      "degree": "Certificate III in Information Technology",
-      "dates": "2024",
-      "note": ""
+      "note": "Back end and front end. Also Certificate III in IT (2024)."
     },
     {
       "school": "Rattana Bundit University, Thailand",
-      "degree": "Bachelor's degree, Business, Management and Marketing",
+      "degree": "Bachelor of Business, Management and Marketing",
       "dates": "2019",
       "note": ""
     }
   ],
   "industry": [
     {
-      "name": "Orefox AI Farm Assistant with Orefox AI Limited",
+      "name": "Orefox AI Farm Assistant",
       "context": "Jul 2026 – Present",
-      "sub": "UX/UI and Data Analytics Lead, team of 6",
+      "sub": "UX/UI and Data Analytics Lead, Orefox AI Limited, team of 6",
       "tech": "Figma, RAG-based AI, Scrum, GitHub, Notion",
-      "desc": "Designed the Figma prototype for an AI-powered farm assistant and led it through client design approval before development began. Designed the chat and document interfaces, including source-citation UX so farmers can see where each AI answer comes from. Built the accuracy evaluation question set used to check the RAG pipeline's answers, and designed data and dashboard views. Ran usability reviews and worked in two-week Scrum sprints with fortnightly client meetings with the Orefox product manager."
+      "desc": "Designed the Figma prototype for an AI-powered farm assistant and led it through client design approval. Designed the chat and document interfaces, including source-citation UX so farmers can see where each AI answer comes from. Built the evaluation question set for the RAG pipeline and designed dashboard views."
     }
   ],
   "projects": [
@@ -203,70 +235,28 @@ button[disabled]{opacity:.5;cursor:default}
       "context": "2026",
       "sub": "UI Designer and Developer, QUT",
       "tech": "React, Node.js, Express.js, MongoDB, AWS, GitHub Actions, Nginx, PM2, Jira",
-      "desc": "Designed the user interface in Figma and collaborated on development of a full-stack language exchange platform. Coordinated work in Jira and deployed the application to AWS using Git, GitHub Actions, Nginx, PM2 and CI/CD workflows."
+      "desc": "Designed the UI in Figma, co-developed the full-stack platform and deployed it to AWS with GitHub Actions, Nginx and PM2."
+    },
+    {
+      "name": "Hotel Group Cyber Risk Register",
+      "context": "2026",
+      "sub": "GRC Analyst, QUT",
+      "tech": "ISO 27001, Privacy Act and NDB scheme, PCI DSS, OWASP Top 10",
+      "desc": "Owned the Loyalty Programme asset, rating its risks, mapping them to ISO 27001 controls, costing treatments and co-writing the board report."
     },
     {
       "name": "Applied Machine Learning",
       "context": "2026",
       "sub": "Academic project, QUT",
       "tech": "Python, PyTorch, Hugging Face Transformers, scikit-learn",
-      "desc": "Completed an end-to-end machine learning project covering data preparation, data modelling, model training and evaluation. Built a foundation in modern machine learning workflows and AI applications."
-    },
-    {
-      "name": "Huddel: Goal Tracking and Support Platform",
-      "context": "2026",
-      "sub": "UX Designer, QUT",
-      "tech": "Figma, Figma Make (AI)",
-      "desc": "Applied human-centred design through user research, personas, user journeys, wireframing, prototyping and usability testing to design a user-focused goal-tracking and support experience."
-    },
-    {
-      "name": "Solar Battery Decision Support",
-      "context": "2025",
-      "sub": "UX Researcher and Designer, QUT",
-      "tech": "Figma, User Research",
-      "desc": "Investigated how users interact with solar-battery adoption information, ROI calculation and purchasing pathways through user research, journey design, wireframing, prototyping and usability evaluation."
-    },
-    {
-      "name": "Indigenous Health Dashboard",
-      "context": "2025",
-      "sub": "Data Analyst, QUT",
-      "tech": "Tableau",
-      "desc": "Analysed health data and built interactive dashboards and visualisations to communicate insights and support data-driven decision-making."
-    },
-    {
-      "name": "Artwork Rental Platform",
-      "context": "2025",
-      "sub": "Full-Stack Developer, QUT",
-      "tech": "Python, Flask, MySQL",
-      "desc": "Designed and developed an artwork rental and booking web application, focusing on rental workflows, database-driven functionality and user experience."
+      "desc": "Built an end-to-end machine learning project covering data preparation, modelling, training and evaluation."
     },
     {
       "name": "High Street Gym Management System",
       "context": "2025",
       "sub": "Full-Stack Developer, TAFE Queensland",
       "tech": "React, Node.js, Express.js, MySQL, REST APIs, MVC",
-      "desc": "Designed and developed a class-booking web application with MVC architecture. Implemented form, API and back-end data validation while translating business requirements into an intuitive user interface."
-    },
-    {
-      "name": "Custom Shirt E-commerce Website",
-      "context": "2025",
-      "sub": "WordPress Developer, TAFE Queensland",
-      "tech": "WordPress, WooCommerce, PHP",
-      "desc": "Developed and customised an e-commerce website. Integrated third-party plugins and built custom plugins to support commercial workflows and business requirements."
-    },
-    {
-      "name": "Household Energy Tracking in Australia",
-      "context": "2024",
-      "sub": "Web Developer, TAFE Queensland",
-      "tech": "Node.js, Express.js, JavaScript, HTML/CSS, MySQL, REST APIs",
-      "desc": "Developed a data-driven web application to track household appliances and electricity consumption and compare energy usage across Australian states."
-    },
-    {
-      "name": "Eyewear and Trans-Siberian Trip Websites",
-      "context": "2024",
-      "sub": "Web Designer, TAFE Queensland",
-      "tech": "Figma",
-      "desc": "Designed a responsive eyewear website and an information-focused travel website, focusing on visual hierarchy, information architecture, navigation and user experience."
+      "desc": "Built an MVC class-booking web app with form, API and back-end validation."
     }
   ]
 }
@@ -481,9 +471,9 @@ button[disabled]{opacity:.5;cursor:default}
     if (!J) throw new Error('nolib');
     var doc = new J({unit: 'pt', format: 'a4'});
     var W = doc.internal.pageSize.getWidth(), H = doc.internal.pageSize.getHeight();
-    var M = 40, TOPM = 36, BOT = 34;
+    var M = 40, TOPM = 30, BOT = 26;
     var NAVY = [43, 52, 69], INK = [42, 51, 66], MUTED = [94, 104, 120];
-    var LX = M, LW = 150, GAP = 22;
+    var LX = M, LW = 138, GAP = 18;
     var TL = LX + LW + GAP + 10;            /* timeline x */
     var RX = TL + 22, RW = W - M - RX;      /* right column */
 
@@ -500,7 +490,7 @@ button[disabled]{opacity:.5;cursor:default}
     doc.text(clean(state.role).toUpperCase(), M, y, {charSpace: 0.8});
     y += 14;
     draw(NAVY);doc.setLineWidth(1.4);doc.line(M, y, W - M, y);
-    var bodyTop = y + 24;
+    var bodyTop = y + 18;
 
     /* ---- left column (page 1) ---- */
     var ly = bodyTop;
@@ -625,7 +615,7 @@ button[disabled]{opacity:.5;cursor:default}
       });
     }
 
-    if (clean(state.summary)){rHead('Profile', 'person');rText(state.summary, 9.2, 'normal', INK, 0, true);y2 += 10;}
+    if (clean(state.summary)){rHead('Profile', 'person');rText(state.summary, 9.2, 'normal', INK, 0, true);y2 += 7;}
 
     function entries(title, kind, list){
       if (!list.length) return;
@@ -638,7 +628,7 @@ button[disabled]{opacity:.5;cursor:default}
         y2 += 2;
         bullets(p.desc);
       });
-      y2 += 10;
+      y2 += 7;
     }
 
     if (state.education.length){
@@ -650,7 +640,7 @@ button[disabled]{opacity:.5;cursor:default}
         if (clean(e.note)) rText(e.note, 8.6, 'normal', MUTED);
       });
     }
-    y2 += 10;
+    y2 += 7;
     entries('Industry Project', 'build', state.industry);
     entries('Projects', 'case', state.projects);
 
@@ -667,7 +657,7 @@ button[disabled]{opacity:.5;cursor:default}
       if (m.t === 'icon') drawIcon(m.kind, m.cy); else drawDot(m.cy);
     });
     var n = doc.getNumberOfPages();
-    for (var pg = 1; pg <= n; pg++){
+    for (var pg = 1; n > 1 && pg <= n; pg++){
       doc.setPage(pg);doc.setFont('helvetica', 'normal');doc.setFontSize(7.5);col(MUTED);
       doc.text(clean(state.name) + '  ·  ' + pg + ' / ' + n, W - M, H - 20, {align: 'right'});
     }
