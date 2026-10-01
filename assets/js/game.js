@@ -1,5 +1,5 @@
 (function(){
-  var ROLES = window.ROLES.filter(function(r){ return r.key !== 'hobby'; });
+  var ROLES = window.ROLES.filter(function(r){ return r.key !== 'hobby' && !r.hidden; });
   /* ---------- mini game ---------- */
   var QS = [
     {q:'Deployed an app to AWS with GitHub Actions', a:'Com Sci Student'},
@@ -8,8 +8,12 @@
     {q:'Tested a prototype with real users in Figma', a:'Web designer'},
     {q:'Trained a model with Hugging Face Transformers', a:'Data scientist'},
     {q:'Built a Tableau dashboard from health data', a:'Data scientist'},
-    {q:'Designed the chat screen for an AI farm assistant', a:'Web designer'}
+    {q:'Designed the chat screen for an AI farm assistant', a:'Web designer'},
+    {q:'Built a risk register and board report for a hotel group', a:'Cybersecurity Analyst'},
+    {q:'Mapped risks to ISO 27001 controls', a:'Cybersecurity Analyst'}
   ];
+  /* only ask about roles that are on the site right now */
+  QS = QS.filter(function(x){ return ROLES.some(function(r){ return r.label === x.a; }); });
   var gi = -1, score = 0, total = 0, answered = false;
   var gq = document.getElementById('g-q'), go2 = document.getElementById('g-opts'), gr = document.getElementById('g-res'), gs = document.getElementById('g-score');
   function nextQ(){

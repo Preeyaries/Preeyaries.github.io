@@ -10,6 +10,7 @@
   --student:#4f5263;
   --artist:#8b5020;
   --traveller:#43843f;
+  --cyber:#2d2f34;
   --designer:#2f6f9f;
   --hobby:#a8456a;
   --role:var(--student);
@@ -179,3 +180,5 @@ a{color:inherit}
   .roles li.active button{font-size:14px;color:#fff;background:var(--role);border-color:var(--role)}
   .dial-foot{justify-content:center;margin-top:18px}
 }
+/* long role names wrap onto two lines on the desktop circle */
+@media (min-width:761px){.roles li.active button{white-space:normal;max-width:9.5em;line-height:1.1}}

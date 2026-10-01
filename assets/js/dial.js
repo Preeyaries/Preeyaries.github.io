@@ -1,7 +1,7 @@
 /* Home page role circle: wheel, drag, keys. Click opens that role page. */
 (function(){
-  /* Hobby lives in the nav only, not on the circle */
-  var ROLES = window.ROLES.filter(function(r){ return r.key !== 'hobby'; });
+  /* Hobby lives in the nav only, and hidden roles are left off the circle */
+  var ROLES = window.ROLES.filter(function(r){ return r.key !== 'hobby' && !r.hidden; });
   /* ---------- role dial ---------- */
   var idx = 0, busy = false;
   var zone = document.getElementById('orb-zone'), orb = document.getElementById('orb');

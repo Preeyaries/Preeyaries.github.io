@@ -1,9 +1,11 @@
 /* Shared by every page: role list, placeholder cartoon avatars (swap for photos later). */
+/* hidden:true keeps a role's page and code but takes it off the site (circle, nav, game) */
 var ROLES = [
   {key:'student', label:'Com Sci Student', color:'#4f5263'},
   {key:'data', label:'Data scientist', color:'#4a2a6e'},
+  {key:'cyber', label:'Cybersecurity Analyst', color:'#2d2f34'},
   {key:'designer', label:'Web designer', color:'#2f6f9f'},
-  {key:'traveller', label:'Traveller', color:'#43843f'},
+  {key:'traveller', label:'Traveller', color:'#43843f', hidden:true},
   {key:'hobby', label:'Hobby', color:'#a8456a'},
   {key:'artist', label:'Artist', color:'#8b5020'}
 ];
@@ -14,7 +16,8 @@ var PHOTOS = {
   student: 'assets/img/student-pop3.webp',
   traveller: 'assets/img/traveller-pop5.webp',
   artist: 'assets/img/artist-pop.webp',
-  data: 'assets/img/data-pop2.webp'
+  data: 'assets/img/data-pop2.webp',
+  cyber: 'assets/img/cyber-pop.webp'
 };
   function shade(hex, amt){
   var n = parseInt(hex.slice(1), 16), r = n >> 16, g = (n >> 8) & 255, b = n & 255;
