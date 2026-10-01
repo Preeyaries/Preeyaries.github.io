@@ -17,7 +17,7 @@ var PHOTOS = {
   traveller: 'assets/img/traveller-pop5.webp',
   artist: 'assets/img/artist-pop.webp',
   data: 'assets/img/data-pop2.webp',
-  cyber: 'assets/img/cyber-pop.webp'
+  cyber: 'assets/img/cyber-pop4.webp'
 };
   function shade(hex, amt){
   var n = parseInt(hex.slice(1), 16), r = n >> 16, g = (n >> 8) & 255, b = n & 255;
