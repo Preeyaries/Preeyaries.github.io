@@ -205,3 +205,15 @@ a{color:inherit}
 /* My hobby page uses the same circle as the home page */
 .dial-head h1{margin:0;font-size:clamp(30px,4vw,40px);font-weight:500;letter-spacing:-.01em}
 .dial.on-page{padding-block:56px 96px}
+/* skill chips that filter project cards */
+.skill-filter li{border:0;padding:0}
+.skill-filter button{all:unset;cursor:pointer;display:block;border:1.5px solid var(--hair);border-radius:999px;padding:7px 14px;font-weight:600;font-size:14.5px;color:var(--ink);transition:color .2s,background .2s,border-color .2s}
+.skill-filter button:hover{border-color:var(--c,var(--ink))}
+.skill-filter button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.skill-filter button[aria-pressed="true"]{color:#fff;background:var(--c,var(--ink));border-color:var(--c,var(--ink))}
+.filter-note{margin:12px 0 0;font-size:14px;color:var(--soft)}
+.card[hidden],.block[hidden]{display:none}
+.block h3.small-h{font-size:16px;color:var(--soft);margin-bottom:12px}
+a.link-card{text-decoration:none;color:inherit;transition:border-color .2s,transform .2s}
+a.link-card:hover{border-color:var(--c,var(--ink));transform:translateY(-2px)}
+a.link-card h4::after{content:" \2197";font-weight:400}
