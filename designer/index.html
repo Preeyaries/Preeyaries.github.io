@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="../assets/css/style.css?v=20261003d">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261004a">
 </head>
 <body id="top" data-root="../" style="--c:#2f6f9f">
 <nav class="nav" aria-label="Main">
@@ -32,13 +32,13 @@
 <section class="page-body"><div class="wrap">
 <div class="blocks"><div class="block"><h3>Tools I design with</h3>
       <p class="block-lead">Pick a skill to see only the projects that use it.</p>
-      <ul class="chips skill-filter" id="skill-filter" aria-label="Filter projects by skill">
+      <ul class="chips skill-filter" aria-label="Filter projects by skill">
         <li><button type="button" data-skill="" aria-pressed="true">All</button></li><li><button type="button" data-skill="Figma" aria-pressed="false">Figma</button></li><li><button type="button" data-skill="FigJam" aria-pressed="false">FigJam</button></li><li><button type="button" data-skill="Figma Make" aria-pressed="false">Figma Make</button></li><li><button type="button" data-skill="Wireframing" aria-pressed="false">Wireframing</button></li><li><button type="button" data-skill="Prototyping" aria-pressed="false">Prototyping</button></li><li><button type="button" data-skill="Usability testing" aria-pressed="false">Usability testing</button></li>
       </ul>
-      <p class="filter-note" id="filter-note" aria-live="polite" hidden></p></div>
+      <p class="filter-note" aria-live="polite" hidden></p></div>
       <div class="block"><h3>Design work</h3>
       <div class="cards">
-        <article class="card feature" data-skills="Figma,Prototyping">
+        <article class="card feature" data-skills="Figma|Prototyping">
             <a class="shot" href="https://github.com/Preeyaries/art-leases" target="_blank" rel="noopener"><img src="../assets/img/art-leases.webp" alt="Art Leases showcase page with a painting in an arched frame" loading="lazy" width="1280" height="700"></a>
             <div class="feature-body">
               <span class="yr" style="color:var(--c)">2025 · UI design and build</span>
@@ -52,7 +52,7 @@
               </div>
             </div>
           </article>
-          <article class="card feature" data-skills="Figma,FigJam,Wireframing,Prototyping,Usability testing">
+          <article class="card feature" data-skills="Figma|FigJam|Wireframing|Prototyping|Usability testing">
             <a class="shot" href="https://www.figma.com/design/h0Ag8WbGTxJLCWPlN7bpqE" target="_blank" rel="noopener"><img src="../assets/img/solar-battery.webp" alt="Solar battery ROI calculator page with a Queensland map and a house with solar panels" loading="lazy" width="1280" height="700"></a>
             <div class="feature-body">
               <span class="yr" style="color:var(--c)">2025 · UX research and design</span>
@@ -64,8 +64,8 @@
               </div>
             </div>
           </article>
-          <article class="card" data-skills="Figma,Prototyping,Usability testing"><span class="yr" style="color:var(--c)">2026</span><h4>Orefox AI screens</h4><p>Chat, document and source-citation interface in Figma.</p></article>
-        <article class="card" data-skills="Figma,Wireframing"><span class="yr" style="color:var(--c)">2024</span><h4>Eyewear and travel websites</h4><p>Responsive layouts and information architecture.</p></article>
+          <article class="card" data-skills="Figma|Prototyping|Usability testing"><span class="yr" style="color:var(--c)">2026</span><h4>Orefox AI screens</h4><p>Chat, document and source-citation interface in Figma.</p></article>
+        <article class="card" data-skills="Figma|Wireframing"><span class="yr" style="color:var(--c)">2024</span><h4>Eyewear and travel websites</h4><p>Responsive layouts and information architecture.</p></article>
         <article class="card soon" data-skills=""><span class="yr" style="color:var(--c)">Coming</span><h4>Case study pages</h4><p>Add before and after screens for each design.</p></article>
       </div></div>
       <div class="block" id="also"><h3 class="small-h">Also made with these skills</h3>
@@ -80,35 +80,6 @@
 </nav></div>
 </main>
 <footer class="foot"><div class="wrap"><span>Preeyanan Khamfoei · Brisbane</span><span><a href="../profile/">Contact</a> · <a href="#top">Back to top ↑</a></span></div></footer>
-<script src="../assets/js/site.js?v=20261003c"></script>
-<script>
-/* Skill chips filter the project cards on this page */
-(function(){
-  var btns = [].slice.call(document.querySelectorAll('#skill-filter button'));
-  var cards = [].slice.call(document.querySelectorAll('[data-skills]'));
-  var note = document.getElementById('filter-note');
-  function apply(skill){
-    var shown = 0;
-    btns.forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-skill') === skill ? 'true' : 'false'); });
-    cards.forEach(function(c){
-      var on = !skill || c.getAttribute('data-skills').split(',').indexOf(skill) !== -1;
-      c.hidden = !on; if (on) shown++;
-    });
-    [].slice.call(document.querySelectorAll('.block')).forEach(function(bl){
-      var inside = bl.querySelectorAll('[data-skills]');
-      if (!inside.length) return;
-      bl.hidden = !bl.querySelectorAll('[data-skills]:not([hidden])').length;
-    });
-    if (skill){ note.hidden = false; note.textContent = shown + (shown === 1 ? ' project uses ' : ' projects use ') + skill + '.'; }
-    else note.hidden = true;
-  }
-  btns.forEach(function(b){
-    b.addEventListener('click', function(){
-      var k = b.getAttribute('data-skill');
-      apply(b.getAttribute('aria-pressed') === 'true' ? '' : k);
-    });
-  });
-})();
-</script>
+<script src="../assets/js/site.js?v=20261004a"></script>
 </body>
 </html>

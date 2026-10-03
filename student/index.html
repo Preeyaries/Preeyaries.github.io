@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="../assets/css/style.css?v=20261003c">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261004a">
 </head>
 <body id="top" data-root="../" style="--c:#4f5263">
 <nav class="nav" aria-label="Main">
@@ -43,15 +43,17 @@
 
       <div class="block">
         <h3>What I have learned and enjoy</h3>
-        <ul class="chips">
-          <li>Data visualisation</li><li>Web design, UX and UI</li><li>Critical thinking</li><li>Coding and logic</li><li>Machine learning</li><li>Cloud deployment</li>
+        <p class="block-lead">Pick a skill to see only the projects that use it.</p>
+        <ul class="chips skill-filter" aria-label="Filter projects by skill">
+          <li><button type="button" data-skill="" aria-pressed="true">All</button></li><li><button type="button" data-skill="Data visualisation" aria-pressed="false">Data visualisation</button></li><li><button type="button" data-skill="Web design, UX and UI" aria-pressed="false">Web design, UX and UI</button></li><li><button type="button" data-skill="Critical thinking" aria-pressed="false">Critical thinking</button></li><li><button type="button" data-skill="Coding and logic" aria-pressed="false">Coding and logic</button></li><li><button type="button" data-skill="Machine learning" aria-pressed="false">Machine learning</button></li><li><button type="button" data-skill="Cloud deployment" aria-pressed="false">Cloud deployment</button></li>
         </ul>
+        <p class="filter-note" aria-live="polite" hidden></p>
       </div>
 
       <div class="block" id="projects">
         <h3>What I have done</h3>
         <div class="cards">
-          <article class="card feature">
+          <article class="card feature" data-skills="Web design, UX and UI|Coding and logic|Cloud deployment">
             <a class="shot" href="https://preeyaries.github.io/language_exchange_platform/" target="_blank" rel="noopener"><img src="../assets/img/bello2.webp" alt="Bello! showcase page with a phone showing the post feed" loading="lazy" width="1280" height="700"></a>
             <div class="feature-body">
               <span class="yr" style="color:var(--c)">2026 · Full-stack web app</span>
@@ -64,7 +66,7 @@
               </div>
             </div>
           </article>
-          <article class="card feature">
+          <article class="card feature" data-skills="Web design, UX and UI|Coding and logic">
             <a class="shot" href="https://github.com/Preeyaries/art-leases" target="_blank" rel="noopener"><img src="../assets/img/art-leases.webp" alt="Art Leases showcase page with a painting in an arched frame" loading="lazy" width="1280" height="700"></a>
             <div class="feature-body">
               <span class="yr" style="color:var(--c)">2025 · Full-stack web app</span>
@@ -78,11 +80,11 @@
               </div>
             </div>
           </article>
-          <article class="card"><span class="yr" style="color:var(--c)">2026 · Industry project</span><h4>Orefox AI Farm Assistant</h4><p>UX/UI and data analytics lead for an AI farm assistant built with Orefox AI.</p></article>
-          <article class="card"><span class="yr" style="color:var(--c)">2026</span><h4>Applied Machine Learning</h4><p>PyTorch, Hugging Face Transformers and scikit-learn.</p></article>
-          <article class="card"><span class="yr" style="color:var(--c)">2026</span><h4>Huddel</h4><p>Goal tracking app designed through user research and usability testing.</p></article>
-          <article class="card"><span class="yr" style="color:var(--c)">2025</span><h4>High Street Gym</h4><p>Class booking web app with React, Express, MySQL and MVC.</p></article>
-          <article class="card"><span class="yr" style="color:var(--c)">2025</span><h4>Indigenous Health Dashboard</h4><p>Interactive Tableau dashboards for health data.</p></article>
+          <article class="card" data-skills="Web design, UX and UI|Data visualisation|Critical thinking"><span class="yr" style="color:var(--c)">2026 · Industry project</span><h4>Orefox AI Farm Assistant</h4><p>UX/UI and data analytics lead for an AI farm assistant built with Orefox AI.</p></article>
+          <article class="card" data-skills="Machine learning|Coding and logic"><span class="yr" style="color:var(--c)">2026</span><h4>Applied Machine Learning</h4><p>PyTorch, Hugging Face Transformers and scikit-learn.</p></article>
+          <article class="card" data-skills="Web design, UX and UI|Critical thinking"><span class="yr" style="color:var(--c)">2026</span><h4>Huddel</h4><p>Goal tracking app designed through user research and usability testing.</p></article>
+          <article class="card" data-skills="Web design, UX and UI|Coding and logic"><span class="yr" style="color:var(--c)">2025</span><h4>High Street Gym</h4><p>Class booking web app with React, Express, MySQL and MVC.</p></article>
+          <article class="card" data-skills="Data visualisation|Critical thinking"><span class="yr" style="color:var(--c)">2025</span><h4>Indigenous Health Dashboard</h4><p>Interactive Tableau dashboards for health data.</p></article>
         </div>
         <a class="pill" style="color:var(--c)" href="https://preeyaries.github.io/resume/" target="_blank" rel="noopener"><span>All projects in my resume</span></a>
       </div>
@@ -104,6 +106,6 @@
 </nav></div>
 </main>
 <footer class="foot"><div class="wrap"><span>Preeyanan Khamfoei · Brisbane</span><span><a href="../profile/">Contact</a> · <a href="#top">Back to top ↑</a></span></div></footer>
-<script src="../assets/js/site.js?v=20261003c"></script>
+<script src="../assets/js/site.js?v=20261004a"></script>
 </body>
 </html>

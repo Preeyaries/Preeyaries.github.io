@@ -104,3 +104,32 @@ document.querySelectorAll('[data-avatar]').forEach(function(el){
   el.innerHTML = avatar(r.key, r.color);
   el.style.background = r.color;
 });
+
+/* Skill chips filter the project cards on a role page.
+   Chips: <ul class="skill-filter"> with <button data-skill="...">. Cards: data-skills="A|B|C". */
+document.querySelectorAll('.skill-filter').forEach(function(list){
+  var scope = list.closest('main') || document;
+  var btns = [].slice.call(list.querySelectorAll('button'));
+  var cards = [].slice.call(scope.querySelectorAll('[data-skills]'));
+  var note = list.parentNode.querySelector('.filter-note');
+  function apply(skill){
+    var shown = 0;
+    btns.forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-skill') === skill ? 'true' : 'false'); });
+    cards.forEach(function(c){
+      var on = !skill || c.getAttribute('data-skills').split('|').indexOf(skill) !== -1;
+      c.hidden = !on; if (on) shown++;
+    });
+    [].slice.call(scope.querySelectorAll('.block')).forEach(function(bl){
+      if (!bl.querySelector('[data-skills]')) return;
+      bl.hidden = !bl.querySelector('[data-skills]:not([hidden])');
+    });
+    if (!note) return;
+    if (skill){ note.hidden = false; note.textContent = shown + (shown === 1 ? ' project uses ' : ' projects use ') + skill + '.'; }
+    else note.hidden = true;
+  }
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      apply(b.getAttribute('aria-pressed') === 'true' ? '' : b.getAttribute('data-skill'));
+    });
+  });
+});

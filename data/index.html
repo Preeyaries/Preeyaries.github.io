@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="../assets/css/style.css?v=20261003c">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261004a">
 </head>
 <body id="top" data-root="../" style="--c:#4a2a6e">
 <nav class="nav" aria-label="Main">
@@ -33,17 +33,19 @@
 <div class="blocks">
       <div class="block">
         <h3>Tools I use</h3>
-        <ul class="chips">
-          <li>Python</li><li>scikit-learn</li><li>PyTorch</li><li>Hugging Face Transformers</li><li>Tableau</li><li>Data visualisation</li><li>Machine learning</li>
+        <p class="block-lead">Pick a skill to see only the projects that use it.</p>
+        <ul class="chips skill-filter" aria-label="Filter projects by tool">
+          <li><button type="button" data-skill="" aria-pressed="true">All</button></li><li><button type="button" data-skill="Python" aria-pressed="false">Python</button></li><li><button type="button" data-skill="scikit-learn" aria-pressed="false">scikit-learn</button></li><li><button type="button" data-skill="PyTorch" aria-pressed="false">PyTorch</button></li><li><button type="button" data-skill="Hugging Face Transformers" aria-pressed="false">Hugging Face Transformers</button></li><li><button type="button" data-skill="Tableau" aria-pressed="false">Tableau</button></li><li><button type="button" data-skill="Data visualisation" aria-pressed="false">Data visualisation</button></li><li><button type="button" data-skill="Machine learning" aria-pressed="false">Machine learning</button></li>
         </ul>
+        <p class="filter-note" aria-live="polite" hidden></p>
       </div>
       <div class="block">
         <h3>Data projects</h3>
         <div class="cards">
-          <article class="card"><span class="yr" style="color:var(--c)">2026 · Industry project</span><h4>Orefox AI Farm Assistant</h4><p>Data analytics lead. Turning farm data into insights for the AI assistant.</p></article>
-          <article class="card"><span class="yr" style="color:var(--c)">2026</span><h4>Applied Machine Learning</h4><p>Models built with PyTorch, Hugging Face Transformers and scikit-learn.</p></article>
-          <article class="card"><span class="yr" style="color:var(--c)">2025</span><h4>Indigenous Health Dashboard</h4><p>Interactive Tableau dashboards for health data.</p></article>
-          <article class="card soon"><span class="yr" style="color:var(--c)">Coming</span><h4>More data work</h4><p>Add notebooks, datasets and results here.</p></article>
+          <article class="card" data-skills="Data visualisation"><span class="yr" style="color:var(--c)">2026 · Industry project</span><h4>Orefox AI Farm Assistant</h4><p>Data analytics lead. Turning farm data into insights for the AI assistant.</p></article>
+          <article class="card" data-skills="Python|scikit-learn|PyTorch|Hugging Face Transformers|Machine learning"><span class="yr" style="color:var(--c)">2026</span><h4>Applied Machine Learning</h4><p>Models built with PyTorch, Hugging Face Transformers and scikit-learn.</p></article>
+          <article class="card" data-skills="Tableau|Data visualisation"><span class="yr" style="color:var(--c)">2025</span><h4>Indigenous Health Dashboard</h4><p>Interactive Tableau dashboards for health data.</p></article>
+          <article class="card soon" data-skills=""><span class="yr" style="color:var(--c)">Coming</span><h4>More data work</h4><p>Add notebooks, datasets and results here.</p></article>
         </div>
       </div>
       <div class="block">
@@ -62,6 +64,6 @@
 </nav></div>
 </main>
 <footer class="foot"><div class="wrap"><span>Preeyanan Khamfoei · Brisbane</span><span><a href="../profile/">Contact</a> · <a href="#top">Back to top ↑</a></span></div></footer>
-<script src="../assets/js/site.js?v=20261003c"></script>
+<script src="../assets/js/site.js?v=20261004a"></script>
 </body>
 </html>
