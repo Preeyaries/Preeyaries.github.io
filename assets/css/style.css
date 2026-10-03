@@ -194,3 +194,11 @@ a{color:inherit}
 .card .links a:hover,.card .links a:focus-visible{border-color:var(--c,var(--ink))}
 .card .links a::after{content:" \2197";font-weight:400}
 @media (max-width:760px){.card.feature{grid-template-columns:1fr;gap:12px}.feature-body{padding:0 4px 6px}}
+/* tabs that switch between groups of cards */
+.block-lead{margin:-8px 0 14px;color:var(--soft);font-size:15px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tabs button{all:unset;cursor:pointer;font-size:14px;font-weight:600;color:var(--soft);border:1.5px solid var(--hair);border-radius:999px;padding:8px 16px;transition:color .2s,background .2s,border-color .2s}
+.tabs button:hover{color:var(--ink)}
+.tabs button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.tabs button[aria-selected="true"]{color:#fff;background:var(--c,var(--ink));border-color:var(--c,var(--ink))}
+.tab-panel[hidden]{display:none}

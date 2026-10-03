@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="../assets/css/style.css?v=20261003a">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261003b">
 </head>
 <body id="top" data-root="../" style="--c:#a8456a">
 <nav class="nav" aria-label="Main">
@@ -24,17 +24,41 @@
       <div>
         <p class="ch-eyebrow">This is me with my</p>
         <h1 class="ch-title" style="color:var(--c)">Hobbies</h1>
-        <p class="ch-lead">What I do when I am not coding.</p>
+        <p class="ch-lead">What I do for fun, including a bit of coding.</p>
       </div>
       <div class="ch-orb" style="border-color:var(--c)"><div data-avatar="hobby"></div></div>
     </div>
 </div></header>
 <section class="page-body"><div class="wrap">
-<div class="blocks"><div class="block"><h3>Things I love</h3>
+<div class="blocks"><div class="block" id="coding"><h3>Coding</h3>
+      <p class="block-lead">Small things I build for myself outside of uni.</p>
+      <div class="tabs" role="tablist" aria-label="Coding hobbies">
+        <button type="button" role="tab" id="tab-personal" aria-controls="panel-personal" aria-selected="true">Personal project</button>
+        <button type="button" role="tab" id="tab-notion" aria-controls="panel-notion" aria-selected="false" tabindex="-1">Notion integration</button>
+      </div>
+      <div class="cards tab-panel" role="tabpanel" id="panel-personal" aria-labelledby="tab-personal">
+        <article class="card feature">
+            <a class="shot" href="https://preeyaries.github.io/national-park-passport-QLD/" target="_blank" rel="noopener"><img src="../assets/img/parks-passport.webp" alt="QLD Parks Passport website showing a passport booklet page with a Lamington stamp" loading="lazy" width="1280" height="700"></a>
+            <div class="feature-body">
+              <span class="yr" style="color:var(--c)">2026 · Personal project</span>
+              <h4>QLD Parks Passport</h4>
+              <p>A digital passport for Queensland national parks. Check in with a date and a photo, collect the park stamp, and keep who you went with and your memories.</p>
+              <div class="links">
+                <a href="https://preeyaries.github.io/national-park-passport-QLD/" target="_blank" rel="noopener">Website</a>
+                <a href="https://preeyaries.github.io/national-park-passport-QLD/app/" target="_blank" rel="noopener">App prototype</a>
+                <a href="https://www.figma.com/design/vDgz9XXeqx9uj3zb79TLy3" target="_blank" rel="noopener">Figma design</a>
+                <a href="https://github.com/Preeyaries/national-park-passport-QLD" target="_blank" rel="noopener">Code on GitHub</a>
+              </div>
+            </div>
+          </article>
+      </div>
+      <div class="cards tab-panel" role="tabpanel" id="panel-notion" aria-labelledby="tab-notion" hidden>
+        <article class="card soon"><span class="yr" style="color:var(--c)">Coming</span><h4>Notion integrations</h4><p>Small tools that connect to Notion will go here.</p></article>
+      </div></div>
+      <div class="block"><h3>Things I love</h3>
       <div class="cards">
         <article class="card soon"><span class="yr" style="color:var(--c)">Listen</span><h4>Podcast</h4><p>Favourite shows or my own episodes.</p></article>
         <article class="card soon"><span class="yr" style="color:var(--c)">Play</span><h4>Music</h4><p>Songs on repeat and playlists.</p></article>
-        <article class="card soon"><span class="yr" style="color:var(--c)">Build</span><h4>Side projects</h4><p>Small apps I make for fun.</p></article>
       </div></div></div>
 </div></section>
 <div class="wrap"><nav class="role-nav" aria-label="More pages">
@@ -43,6 +67,28 @@
 </nav></div>
 </main>
 <footer class="foot"><div class="wrap"><span>Preeyanan Khamfoei · Brisbane</span><span><a href="../profile/">Contact</a> · <a href="#top">Back to top ↑</a></span></div></footer>
-<script src="../assets/js/site.js?v=20261003a"></script>
+<script src="../assets/js/site.js?v=20261003b"></script>
+<script>
+/* Coding block: switch between Personal project and Notion integration */
+(function(){
+  var tabs = [].slice.call(document.querySelectorAll('.tabs [role="tab"]'));
+  function pick(t){
+    tabs.forEach(function(x){
+      var on = x === t;
+      x.setAttribute('aria-selected', on ? 'true' : 'false');
+      x.tabIndex = on ? 0 : -1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ pick(t); });
+    t.addEventListener('keydown', function(e){
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      var n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+      n.focus(); pick(n);
+    });
+  });
+})();
+</script>
 </body>
 </html>
