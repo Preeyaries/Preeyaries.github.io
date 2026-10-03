@@ -1,5 +1,5 @@
 /* Shared by every page: role list, placeholder cartoon avatars (swap for photos later). */
-/* hidden:true keeps a role's page and code but takes it off the site (circle, nav, game) */
+/* hidden:true keeps a role off the home circle, the nav and the game. Traveller and Developer live on the My hobby circle. */
 var ROLES = [
   {key:'student', label:'Com Sci Student', color:'#4f5263'},
   {key:'data', label:'Data scientist', color:'#4a2a6e'},
@@ -7,6 +7,7 @@ var ROLES = [
   {key:'designer', label:'Web designer', color:'#2f6f9f'},
   {key:'traveller', label:'Traveller', color:'#43843f', hidden:true},
   {key:'hobby', label:'Hobby', color:'#a8456a'},
+  {key:'developer', label:'Developer', color:'#1f6f78', hidden:true},
   {key:'artist', label:'Artist', color:'#8b5020'}
 ];
 /* Real photos. Each file is a cut-out on a transparent square 1.4x the circle,
@@ -74,6 +75,13 @@ function avatar(kind, color){
     s += '<path d="M66 98 C66 56 134 56 134 98" stroke="' + dark + '" stroke-width="6" fill="none"/><circle cx="66" cy="102" r="9" fill="' + dark + '"/><circle cx="134" cy="102" r="9" fill="' + dark + '"/>';
     s += '<g fill="' + W + '" opacity=".95"><path d="M150 40 v26 a7 6 0 1 1 -4 -5 V34 l18 -5 v22 a7 6 0 1 1 -4 -5 V36z"/><path d="M34 50 v18 a6 5 0 1 1 -3 -4 V46 l12 -3 v4z"/></g>';
     s += '<rect x="92" y="164" width="16" height="26" rx="8" fill="' + dark + '"/><path d="M100 190 v12" stroke="' + dark + '" stroke-width="4"/>';
+  }
+  if (kind === 'developer'){
+    s += '<circle cx="100" cy="50" r="12" fill="' + dark + '"/>';
+    s += '<rect x="50" y="158" width="100" height="48" rx="6" fill="' + dark + '"/>';
+    s += '<path d="M84 174 l-10 9 10 9 M116 174 l10 9 -10 9 M105 170 l-10 26" stroke="' + W + '" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>';
+    s += '<g fill="' + W + '" opacity=".9"><rect x="140" y="34" width="34" height="24" rx="4"/><rect x="26" y="56" width="26" height="18" rx="4"/></g>';
+    s += '<path d="M148 43 l-4 3 4 3 M166 43 l4 3 -4 3" stroke="' + dark + '" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M32 65 h14" stroke="' + dark + '" stroke-width="2" stroke-linecap="round"/>';
   }
   if (kind === 'data'){
     s += '<circle cx="100" cy="50" r="12" fill="' + dark + '"/>';

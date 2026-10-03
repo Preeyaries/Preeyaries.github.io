@@ -1,7 +1,9 @@
 /* Home page role circle: wheel, drag, keys. Click opens that role page. */
 (function(){
   /* Hobby lives in the nav only, and hidden roles are left off the circle */
-  var ROLES = window.ROLES.filter(function(r){ return r.key !== 'hobby' && !r.hidden; });
+  /* A page can pass its own roles in window.DIAL_ROLES, each with an href to open */
+  var ROLES = window.DIAL_ROLES || window.ROLES.filter(function(r){ return r.key !== 'hobby' && !r.hidden; });
+  function link(r){ return r.href || (r.key + '/'); }
   /* ---------- role dial ---------- */
   var idx = 0, busy = false;
   var zone = document.getElementById('orb-zone'), orb = document.getElementById('orb');
@@ -16,7 +18,7 @@
     var b = document.createElement('button');
     b.type = 'button'; b.textContent = r.label;
     b.addEventListener('click', function(){
-      if (i === idx) location.href = r.key + '/'; else setRole(i, i > idx ? 1 : -1);
+      if (i === idx) location.href = link(r); else setRole(i, i > idx ? 1 : -1);
     });
     li.appendChild(b); list.appendChild(li);
   });
@@ -43,7 +45,7 @@
     var r = ROLES[idx];
     document.documentElement.style.setProperty('--role', r.color);
     ring.style.borderColor = r.color;
-    go.href = r.key + '/';
+    go.href = link(r);
     go.textContent = 'Open this side of me →';
   }
 
@@ -86,14 +88,14 @@
     if (Math.abs(dy) > 45){setRole(idx + (dy < 0 ? 1 : -1), dy < 0 ? 1 : -1);startY = e.clientY;moved = true;}
   });
   zone.addEventListener('pointerup', function(){
-    if (startY !== null && !moved) location.href = ROLES[idx].key + '/';   /* a plain click opens the role */
+    if (startY !== null && !moved) location.href = link(ROLES[idx]);   /* a plain click opens the role */
     startY = null;
   });
   zone.addEventListener('pointercancel', function(){startY = null;});
   zone.addEventListener('keydown', function(e){
     if (e.key === 'ArrowDown' || e.key === 'ArrowRight'){e.preventDefault();setRole(idx + 1, 1);}
     if (e.key === 'ArrowUp' || e.key === 'ArrowLeft'){e.preventDefault();setRole(idx - 1, -1);}
-    if (e.key === 'Enter'){location.href = ROLES[idx].key + '/';}
+    if (e.key === 'Enter'){location.href = link(ROLES[idx]);}
   });
 
 })();

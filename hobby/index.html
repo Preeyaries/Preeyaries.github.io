@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="../assets/css/style.css?v=20261003b">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261003c">
 </head>
 <body id="top" data-root="../" style="--c:#a8456a">
 <nav class="nav" aria-label="Main">
@@ -19,16 +19,20 @@
   <div class="wrap"><div class="nav-rule"></div></div>
 </nav>
 <main style="--c:#a8456a">
-<header class="page-head"><div class="wrap">
-<div class="ch-head">
-      <div>
-        <p class="ch-eyebrow">This is me with my</p>
-        <h1 class="ch-title" style="color:var(--c)">Hobbies</h1>
-        <p class="ch-lead">What I do for fun, including a bit of coding.</p>
-      </div>
-      <div class="ch-orb" style="border-color:var(--c)"><div data-avatar="hobby"></div></div>
+<section class="dial on-page wrap" id="about" aria-labelledby="about-h">
+  <div class="dial-head"><h1 id="about-h">My hobby</h1><span>as a..</span></div>
+  <div class="dial-body">
+    <div class="orb-zone" id="orb-zone" tabindex="0" role="listbox" aria-label="Choose one of my hobby roles. Scroll, drag or use the arrow keys.">
+      <div class="orb-ring" id="orb-ring"></div>
+      <div class="orb-clip"><div class="orb" id="orb"></div></div>
+      <span class="orb-hint">Scroll or drag, then click the circle</span>
     </div>
-</div></header>
+    <div>
+      <ul class="roles" id="roles"></ul>
+      <div class="dial-foot"><a class="go" id="go" href="../traveller/">Open this side of me →</a></div>
+    </div>
+  </div>
+</section>
 <section class="page-body"><div class="wrap">
 <div class="blocks"><div class="block" id="coding"><h3>Coding</h3>
       <p class="block-lead">Small things I build for myself outside of uni.</p>
@@ -67,7 +71,15 @@
 </nav></div>
 </main>
 <footer class="foot"><div class="wrap"><span>Preeyanan Khamfoei · Brisbane</span><span><a href="../profile/">Contact</a> · <a href="#top">Back to top ↑</a></span></div></footer>
-<script src="../assets/js/site.js?v=20261003b"></script>
+<script src="../assets/js/site.js?v=20261003c"></script>
+<script>
+/* roles on the My hobby circle */
+window.DIAL_ROLES = [
+  {key:'traveller', label:'Traveller', color:'#43843f', href:'../traveller/'},
+  {key:'developer', label:'Developer', color:'#1f6f78', href:'#coding'}
+];
+</script>
+<script src="../assets/js/dial.js?v=20261003c"></script>
 <script>
 /* Coding block: switch between Personal project and Notion integration */
 (function(){

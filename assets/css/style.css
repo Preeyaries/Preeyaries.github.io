@@ -202,3 +202,6 @@ a{color:inherit}
 .tabs button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 .tabs button[aria-selected="true"]{color:#fff;background:var(--c,var(--ink));border-color:var(--c,var(--ink))}
 .tab-panel[hidden]{display:none}
+/* My hobby page uses the same circle as the home page */
+.dial-head h1{margin:0;font-size:clamp(30px,4vw,40px);font-weight:500;letter-spacing:-.01em}
+.dial.on-page{padding-block:56px 96px}
