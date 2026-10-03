@@ -182,3 +182,15 @@ a{color:inherit}
 }
 /* long role names wrap onto two lines on the desktop circle */
 @media (min-width:761px){.roles li.active button{white-space:normal;max-width:9.5em;line-height:1.1}}
+/* featured project card: screenshot, text and links */
+.card.feature{grid-column:1/-1;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:22px;align-items:center;padding:14px}
+.card.feature .shot{display:block;border-radius:10px;overflow:hidden;border:1px solid var(--hair);line-height:0}
+.card.feature .shot img{width:100%;height:auto;display:block;transition:transform .3s}
+.card.feature .shot:hover img{transform:scale(1.02)}
+.feature-body{display:grid;gap:8px;align-content:center;padding:6px 8px 6px 0;min-width:0}
+.card.feature h4{font-size:22px}
+.card .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.card .links a{font-size:13px;font-weight:600;color:var(--ink);text-decoration:none;border:1.5px solid var(--hair);border-radius:999px;padding:6px 12px;transition:border-color .2s}
+.card .links a:hover,.card .links a:focus-visible{border-color:var(--c,var(--ink))}
+.card .links a::after{content:" \2197";font-weight:400}
+@media (max-width:760px){.card.feature{grid-template-columns:1fr;gap:12px}.feature-body{padding:0 4px 6px}}
